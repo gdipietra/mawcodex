@@ -1,0 +1,8 @@
+interface:
+  display_name: "SAW - Slice Academic Workflow"
+  short_description: "Export sanitized MAW project learnings"
+  default_prompt: "Use $saw to preview sanitized project-return and upstream-learning slices from this project's recorded MAW state."
+
+policy:
+  allow_implicit_invocation: false
+

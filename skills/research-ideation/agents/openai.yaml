@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Ideation"
+  short_description: "Generate grounded research questions and designs"
+  default_prompt: "Use $research-ideation to generate and rank source-grounded research directions from this topic."

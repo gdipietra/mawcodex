@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Analysis"
+  short_description: "Help with Data Analysis tasks"
+  default_prompt: "Use $data-analysis to run this workflow on the files or context I provide."

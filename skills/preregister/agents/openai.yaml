@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preregister"
+  short_description: "Draft a prospective, registry-shaped analysis plan"
+  default_prompt: "Use $preregister to turn this prospective study design into a readiness-checked local draft."

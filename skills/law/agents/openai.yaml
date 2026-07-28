@@ -1,0 +1,4 @@
+interface:
+  display_name: "LAW - Layer Academic Workflow"
+  short_description: "Design effective project instruction layers"
+  default_prompt: "Use $law to map and safely update this project's instruction and configuration hierarchy."

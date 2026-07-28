@@ -1,0 +1,62 @@
+{
+  "description": "Optional MAW Codex research guardrails and context continuity hooks.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/scripts/maw_hook.sh\"",
+            "commandWindows": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"%PLUGIN_ROOT%\\hooks\\scripts\\maw_hook.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Checking research and git guardrails"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/scripts/maw_hook.sh\"",
+            "commandWindows": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"%PLUGIN_ROOT%\\hooks\\scripts\\maw_hook.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Reconciling numeric-claim provenance"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/scripts/maw_hook.sh\"",
+            "commandWindows": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"%PLUGIN_ROOT%\\hooks\\scripts\\maw_hook.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Saving academic workflow state"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/scripts/maw_hook.sh\"",
+            "commandWindows": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"%PLUGIN_ROOT%\\hooks\\scripts\\maw_hook.ps1\"",
+            "timeout": 5,
+            "statusMessage": "Restoring academic workflow state",
+            "additionalContextLimit": 2500
+          }
+        ]
+      }
+    ]
+  }
+}

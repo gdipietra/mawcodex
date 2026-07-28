@@ -1,0 +1,48 @@
+# Local and sensitive configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw and restricted data: retain folder markers only
+data/raw/*
+!data/raw/.gitkeep
+data/restricted/
+data/confidential/
+
+# Generated analysis outputs
+scripts/R/_outputs/
+data/derived/*
+!data/derived/.gitkeep
+
+# LaTeX and Quarto build products
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+/.quarto/
+**/*_files/
+
+# Local tool state
+.maw/local.yaml
+.Rhistory
+.RData
+.Rproj.user/
+.venv/
+__pycache__/
+*.pyc
+
+# Operating-system files
+.DS_Store
+Thumbs.db

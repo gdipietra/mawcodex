@@ -1,0 +1,43 @@
+{
+  "name": "mawcodex",
+  "version": "1.2.0",
+  "description": "Codex-native academic workflows for research, writing, reproducibility, review, and teaching.",
+  "author": {
+    "name": "Giovanni Di Pietra"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic-research",
+    "reproducibility",
+    "econometrics",
+    "writing",
+    "teaching"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MAW Codex",
+    "shortDescription": "Academic research workflows with verification gates.",
+    "longDescription": "Plan, execute, review, and verify academic research, empirical analysis, manuscripts, replication packages, and teaching materials with Codex-native skills.",
+    "developerName": "Giovanni Di Pietra",
+    "category": "Education",
+    "capabilities": [
+      "Academic research planning",
+      "Reproducible empirical workflows",
+      "Manuscript and slide review",
+      "Research governance",
+      "Ongoing-project deployment readiness",
+      "Cross-project workflow management"
+    ],
+    "defaultPrompt": [
+      "Run this academic task with explicit evidence and verification.",
+      "Ask ManageRAW to inspect this project's MAW configuration and route the next management action."
+    ],
+    "brandColor": "#9B4AC3",
+    "composerIcon": "./assets/brand/maw-icon.png",
+    "logo": "./assets/brand/maw-icon.png",
+    "logoDark": "./assets/brand/maw-icon.png",
+    "screenshots": [
+      "./assets/brand/maw-thumbnail.png"
+    ]
+  }
+}

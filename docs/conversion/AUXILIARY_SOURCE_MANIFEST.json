@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/pedrohcgs/claude-code-my-workflow",
+  "source_commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
+  "generated_by": "scripts/refresh_auxiliary_source_manifest.py",
+  "tracked_source_files": 211,
+  "previously_mapped_files": 163,
+  "auxiliary_files": 48,
+  "files": [
+    {
+      "name": ".githooks/pre-commit",
+      "source": ".githooks/pre-commit",
+      "source_sha256": "063bc3b28a20d1f406add3dece347b61bb533e5c90d943523aa9573c7bf850cf",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "non-mutating project Git gate",
+      "targets": [
+        {
+          "path": "assets/project-template/.githooks/pre-commit",
+          "sha256": "b08c5b7fd7c58bcd37172a3d471809bd9c5457489b680b23b1e68bd6b0f702f9"
+        },
+        {
+          "path": "assets/project-template/scripts/project_precommit.py",
+          "sha256": "3303a2395c163700ecca61a1122615a5956ad4206f40975973f9f523da8e7b72"
+        },
+        {
+          "path": "assets/project-template/scripts/install_git_hooks.py",
+          "sha256": "81e8c39e8da57709924a7fe6b53ffdf20b7cb1efa37d91bfa335b58515516835"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Reimplemented the repository hook without stash or pop mutations and kept activation preview-first and explicitly project-local."
+    },
+    {
+      "name": ".github/CODE_OF_CONDUCT.md",
+      "source": ".github/CODE_OF_CONDUCT.md",
+      "source_sha256": "77cffb786e7dae950a923c5c9420f9a8f89664b5e21c50f1d3dacf6cd9058a65",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/CODE_OF_CONDUCT.md",
+          "sha256": "bb9057d856985788b37524d5ef4b062d24429d5fa493a4aa72f3a3f9c6e9cb0d"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".github/CONTRIBUTING.md",
+      "source": ".github/CONTRIBUTING.md",
+      "source_sha256": "a1b691e87cdaee99c3eb68c32bac1a614582af58f4706616f0d51f7d52ab1427",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/CONTRIBUTING.md",
+          "sha256": "20e59fd5fe8a2735b4a0643353380ab190bc0db0e637407b980e6f567c96266d"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "source": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "source_sha256": "4e938f3f28ba50de82a4f94db2f6dca1351c886360002d5d59b0e313dad42023",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+          "sha256": "968eab7557efa86719cd31b3789cb3884f50611b5142159300d5abded512f4f4"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_sha256": "546b35ffaca9bb23349ec85f63aee9719456ad2463cdb82c9aaf428c709d8b5a",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/PULL_REQUEST_TEMPLATE.md",
+          "sha256": "9c75a728a428ff3145b497b21962aaa42491a5f72cf6a471ecf0458b93f4e646"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".github/SECURITY.md",
+      "source": ".github/SECURITY.md",
+      "source_sha256": "d355c6a015715ef87d43b9a7b16416a0a7bc14f5dd5fb583d7f634b3afd05372",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/SECURITY.md",
+          "sha256": "3ae9b57a9ff28e3f93acea555538540fc6280a4d59807bb33315101c1121ed86"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".github/workflows/deploy.yml",
+      "source": ".github/workflows/deploy.yml",
+      "source_sha256": "7e4d86dd3c0ef306253140df593bd2c4364f7c3dd33fbddbf35568173e95e6b1",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "explicit deployment workflow",
+      "targets": [
+        {
+          "path": "skills/deploy/SKILL.md",
+          "sha256": "decdfe4bc777aafa84c0aef592bf780e6f991c06662202259e707f04f5f7f78b"
+        },
+        {
+          "path": "docs/conversion/PROJECT_TEMPLATE_MAP.md",
+          "sha256": "ad21f4bed026d2573e9a2ccf6d11c7cd90fd21e000ac4ac411f011c0f2ef6261"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced automatic provider-guide deployment with an explicit deployment skill and project-specific authority gate; no publication occurs during installation."
+    },
+    {
+      "name": ".github/workflows/gates.yml",
+      "source": ".github/workflows/gates.yml",
+      "source_sha256": "995084bb224714028a08cf15972f7bed1e9ae76571947e70d82c680d1508dd34",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "independent repository governance or validation",
+      "targets": [
+        {
+          "path": ".github/workflows/gates.yml",
+          "sha256": "7070774d4b04b88dd72ca328a4fe102cc8f0aceba8a06b4e0c4176729213e4fb"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote repository governance or CI for the independent Codex-native package while retaining contribution, security, and validation intent."
+    },
+    {
+      "name": ".gitignore",
+      "source": ".gitignore",
+      "source_sha256": "749d23a2b8380a9fde80db05859f3201fb00891c4f458f68530f28edb05669aa",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "package and project ignore policies",
+      "targets": [
+        {
+          "path": ".gitignore",
+          "sha256": "4b84a8eff4b4ed85abbbca4b1c772fc1c983c56cece9649e0998b0583d69b4cc"
+        },
+        {
+          "path": "assets/project-template/.gitignore",
+          "sha256": "51cc98bd0a71101f48073ecb018704733af107e93a85e8be820994a90f84ef07"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Split provider-repository ignore rules into package and initialized-project policies, retaining generated-file and secret exclusions without provider cache paths."
+    },
+    {
+      "name": ".vscode/settings.json",
+      "source": ".vscode/settings.json",
+      "source_sha256": "9264e2c6e1558d59ba331e28c28ecf6f2c2c0f20d01e4be822459ade5c365fbb",
+      "classification": "unsupported",
+      "status": "validated",
+      "disposition": "editor-specific settings intentionally omitted",
+      "targets": [
+        {
+          "path": "docs/conversion/PROJECT_TEMPLATE_MAP.md",
+          "sha256": "ad21f4bed026d2573e9a2ccf6d11c7cd90fd21e000ac4ac411f011c0f2ef6261"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Omitted editor-specific and provider permission behavior; Codex authority remains user-controlled and the project map records the intentional behavior loss."
+    },
+    {
+      "name": "CHANGELOG.md",
+      "source": "CHANGELOG.md",
+      "source_sha256": "a0441b269ecbea0fae374c164ec67b7aeee0b7a3249cf66b1da22b729301cb88",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "independent package history",
+      "targets": [
+        {
+          "path": "CHANGELOG.md",
+          "sha256": "cb3db359a25ccad2743e3e0af96b3e56944e748a7d276de4032e172f8c8417e1"
+        },
+        {
+          "path": "NOTICE.md",
+          "sha256": "f7184e2ff6eccaeafdd8a9f1d54bebcf11056f8d1bc8fb394247bdf8515c73ed"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Started an independent package changelog while retaining the upstream release and attribution boundary in notices and conversion records."
+    },
+    {
+      "name": "CITATION.cff",
+      "source": "CITATION.cff",
+      "source_sha256": "bcf99b7f1d25e16a2f1b1d45a7092bcf63b083b26efcc06e27905b72bc92bddd",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "package citation with upstream reference",
+      "targets": [
+        {
+          "path": "CITATION.cff",
+          "sha256": "9afdb4aa1ed691d09878ad6f0010164f68b6ed06ab34044f5d2697d576a95310"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote citation metadata for MAW Codex and retained Pedro's workflow as an explicit referenced software source."
+    },
+    {
+      "name": "Figures/.gitkeep",
+      "source": "Figures/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/Figures/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "LICENSE",
+      "source": "LICENSE",
+      "source_sha256": "2c4d743f95b94dcd4bddebede230035f61bd399754e36d1fc09f2630a592cbaf",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "MIT package license",
+      "targets": [
+        {
+          "path": "LICENSE",
+          "sha256": "0472efff8283df45448db6f160184c2a01bb80207664c86577104e24e91942ea"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Retained the permissive MIT distribution basis and added separate notices for upstream and third-party attribution."
+    },
+    {
+      "name": "MEMORY.md",
+      "source": "MEMORY.md",
+      "source_sha256": "77164acbf5c2cde27497a6fefd59a457265554bd04b1c30df02ea6b311a33388",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "clean initialized-project memory",
+      "targets": [
+        {
+          "path": "assets/project-template/MEMORY.md",
+          "sha256": "90c7e64d79fdbb94dcaedeab2d6cc8a59d394a3d5c817b610fb562b22b7659a4"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced source release history with an empty evidence-oriented project memory so new projects do not inherit unrelated conclusions."
+    },
+    {
+      "name": "Preambles/.gitkeep",
+      "source": "Preambles/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "populated initialized-project directory",
+      "targets": [
+        {
+          "path": "assets/project-template/Preambles/README.md",
+          "sha256": "84465afd27c0e73e42492deda3fcbfc68f70e6468b0740c10be6d0dc0676b9c8"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "The empty marker became unnecessary because the initialized project ships reviewed starter content in the same durable directory."
+    },
+    {
+      "name": "README.md",
+      "source": "README.md",
+      "source_sha256": "eba225e525d35e15d5b33b6352b787c2a1f208498cc1bd074ddf3d4a0fe7c4af",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "Codex-native package guide",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Rewrote installation, architecture, validation, and update guidance for the two-repository Codex-native workflow."
+    },
+    {
+      "name": "Slides/.gitkeep",
+      "source": "Slides/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "populated initialized-project directory",
+      "targets": [
+        {
+          "path": "assets/project-template/Slides/HelloWorld.tex",
+          "sha256": "faf3b3b9be9965ee9a5da61dd691e96bfaf8a5ca281d05cb404eccb14023f9d6"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "The empty marker became unnecessary because the initialized project ships reviewed starter content in the same durable directory."
+    },
+    {
+      "name": "TROUBLESHOOTING.md",
+      "source": "TROUBLESHOOTING.md",
+      "source_sha256": "083277b0e7721290cc340a427d0237cfe8dc6f0c0da7482eca87cbe8b2b0287e",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "installation and limitations guidance",
+      "targets": [
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/KNOWN_LIMITATIONS.md",
+          "sha256": "6e5571c28904e5b5859e55f7624c2a2a31e1b3a6db4b146880d87403af7dd568"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Integrated supported troubleshooting into the installation guide and stable-boundary limitations instead of retaining provider-specific remedies."
+    },
+    {
+      "name": "docs/index.html",
+      "source": "docs/index.html",
+      "source_sha256": "2869da29707a0c87e181c98ffa53cb3d9ca6bebcaffd79f2893b59f982ceeb57",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "docs/workflow-guide.html",
+      "source": "docs/workflow-guide.html",
+      "source_sha256": "c99702f44fdbef2cd84596969cf8ae7b1b2a2c900484d499852e9e0cdbdfc698",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "explorations/ARCHIVE/.gitkeep",
+      "source": "explorations/ARCHIVE/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/explorations/ARCHIVE/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "guide/.gitignore",
+      "source": "guide/.gitignore",
+      "source_sha256": "a2c42d7579873fcc1885712af8e33d47a2d84452ca1214383e92b03ed98321c4",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "guide/_quarto.yml",
+      "source": "guide/_quarto.yml",
+      "source_sha256": "37aea309b2d8980a5bee988869445c71c1fe9eadbe4657c60fda766d21aae283",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "guide/custom.scss",
+      "source": "guide/custom.scss",
+      "source_sha256": "b659c486632417eabf9023251942d4aa9e7ccbf9f8da4c04107401c9160a870e",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "guide/workflow-guide.html",
+      "source": "guide/workflow-guide.html",
+      "source_sha256": "c99702f44fdbef2cd84596969cf8ae7b1b2a2c900484d499852e9e0cdbdfc698",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "guide/workflow-guide.qmd",
+      "source": "guide/workflow-guide.qmd",
+      "source_sha256": "3f38986899456bed934119f8104730095357849e64c7f15fbf0d1d364d7dc53f",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "directly maintained package documentation",
+      "targets": [
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "04a8b13900bb38a7abbba3c12932797fb74fef08139ad75d34001a8243c1e722"
+        },
+        {
+          "path": "docs/conversion/README.md",
+          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the generated provider guide and deployed HTML with directly maintained package, installation, and auditable conversion documentation."
+    },
+    {
+      "name": "master_supporting_docs/supporting_papers/.gitkeep",
+      "source": "master_supporting_docs/supporting_papers/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/master_supporting_docs/supporting_papers/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "master_supporting_docs/supporting_slides/.gitkeep",
+      "source": "master_supporting_docs/supporting_slides/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/master_supporting_docs/supporting_slides/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/audits/.gitkeep",
+      "source": "quality_reports/audits/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/audits/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/checkpoints/.gitkeep",
+      "source": "quality_reports/checkpoints/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/checkpoints/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/decisions/.gitkeep",
+      "source": "quality_reports/decisions/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/decisions/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/diagnoses/.gitkeep",
+      "source": "quality_reports/diagnoses/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/diagnoses/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/merges/.gitkeep",
+      "source": "quality_reports/merges/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/merges/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/plans/.gitkeep",
+      "source": "quality_reports/plans/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/plans/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/preregistrations/.gitkeep",
+      "source": "quality_reports/preregistrations/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/preregistrations/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/session_logs/.gitkeep",
+      "source": "quality_reports/session_logs/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/session_logs/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "quality_reports/specs/.gitkeep",
+      "source": "quality_reports/specs/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "direct port",
+      "status": "validated",
+      "disposition": "initialized-project empty-directory marker",
+      "targets": [
+        {
+          "path": "assets/project-template/quality_reports/specs/.gitkeep",
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Preserved the source repository's durable empty directory so initialized academic projects retain the same organization and artifact routing."
+    },
+    {
+      "name": "scripts/R/.gitkeep",
+      "source": "scripts/R/.gitkeep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "populated initialized-project directory",
+      "targets": [
+        {
+          "path": "assets/project-template/scripts/R/README.md",
+          "sha256": "0eaeda823f2403eaed0b61dfe3066e470be1c441e9dd4634991ffaaaf3913980"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "The empty marker became unnecessary because the initialized project ships reviewed starter content in the same durable directory."
+    },
+    {
+      "name": "scripts/check-model-versions.sh",
+      "source": "scripts/check-model-versions.sh",
+      "source_sha256": "84a5272cc9a3c26da4ec11ce66f0734c2c354efaacb4a4e3a2e4895e507d53ca",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "references/model-versions.md",
+          "sha256": "24c67154f906935d6a1327d93a1ffc4da7b7531c0d8cf928a7426944edf699f6"
+        },
+        {
+          "path": "scripts/validate_package.py",
+          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/check-palette-sync.sh",
+      "source": "scripts/check-palette-sync.sh",
+      "source_sha256": "ac4447974c830a757617b8888b8ff2c621525273793073f5104e4ef4636a6af7",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "assets/project-template/scripts/check-palette-sync.py",
+          "sha256": "08451cded4a5f86fa774cbf4edaf0666fa0f52764449011d123a9db437dec47d"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/check-skill-integrity.py",
+      "source": "scripts/check-skill-integrity.py",
+      "source_sha256": "615d4f6d98bf95a2ae78e0aa3e4e455e9de57115fdd0539ab73ec97f767dfcfc",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "scripts/run_skill_validators.py",
+          "sha256": "af1a203f8a08f33fa8466933d2446772298d8346e6f3a9797ec70f30444674fa"
+        },
+        {
+          "path": "scripts/validate_package.py",
+          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/check-surface-sync.py",
+      "source": "scripts/check-surface-sync.py",
+      "source_sha256": "800257d67d46388c4619b27613233e9313d4c9b683315d4b952ad6ebdb7eecf2",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "scripts/validate_package.py",
+          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+        },
+        {
+          "path": "scripts/refresh_source_manifest.py",
+          "sha256": "d7f59d287a083c2024de698a61912c5c321041d73444fc598ad2e63cbdf174d9"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/check-surface-sync.sh",
+      "source": "scripts/check-surface-sync.sh",
+      "source_sha256": "22ff6ed476930542c6f172257b22126730ee05b4fb0426ab69557970874db9a4",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "scripts/validate_package.py",
+          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+        },
+        {
+          "path": "scripts/refresh_source_manifest.py",
+          "sha256": "d7f59d287a083c2024de698a61912c5c321041d73444fc598ad2e63cbdf174d9"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/install-hooks.sh",
+      "source": "scripts/install-hooks.sh",
+      "source_sha256": "a22fd44fa50ad9bd5f6db1c81b3ded3b19a1041376668166f96534167f768f78",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "assets/project-template/scripts/install_git_hooks.py",
+          "sha256": "81e8c39e8da57709924a7fe6b53ffdf20b7cb1efa37d91bfa335b58515516835"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/nightly-repro-check.sh",
+      "source": "scripts/nightly-repro-check.sh",
+      "source_sha256": "a3f68c8285583fb250ae665b1ce4a842bcea4c33859c7d2d8f5b7371b5815acc",
+      "classification": "native rewrite",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "assets/project-template/scripts/nightly-repro-check.py",
+          "sha256": "54b15c5690f77a295d940aff67f6beff7ff8561d843dc19f8acc24f6159f4cca"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/sync_to_docs.sh",
+      "source": "scripts/sync_to_docs.sh",
+      "source_sha256": "3a88a7d65c1abdeddc8ce791d24475ccc29487f0c16f91ed5c51ef1dd4541fbf",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "skills/deploy/SKILL.md",
+          "sha256": "decdfe4bc777aafa84c0aef592bf780e6f991c06662202259e707f04f5f7f78b"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    },
+    {
+      "name": "scripts/validate-setup.sh",
+      "source": "scripts/validate-setup.sh",
+      "source_sha256": "dffa0a4c5638826fabe07c7b74e7feb2ab4f2829654da8ea7ab542e943cde637",
+      "classification": "composed replacement",
+      "status": "validated",
+      "disposition": "cross-platform Codex validation or explicit workflow",
+      "targets": [
+        {
+          "path": "scripts/validate_package.py",
+          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+        },
+        {
+          "path": "scripts/check_source_clone.py",
+          "sha256": "7609efbf647510ea780c56a00bed41eb239d8560025c9dd66df45e85d33e8706"
+        },
+        {
+          "path": "assets/project-template/scripts/validate-project.py",
+          "sha256": "147a795e923f8bbda6a22b471f59e783b60c72c0a47c0cbd033315aa2ff69a84"
+        }
+      ],
+      "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
+      "revision_summary": "Replaced the shell or provider-specific maintenance helper with cross-platform deterministic validation or an explicit Codex workflow preserving the original operational intent."
+    }
+  ]
+}

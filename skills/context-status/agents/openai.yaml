@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Status"
+  short_description: "Help with Context Status tasks"
+  default_prompt: "Use $context-status to run this workflow on the files or context I provide."

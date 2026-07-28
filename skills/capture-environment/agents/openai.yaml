@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capture Environment"
+  short_description: "Help with Capture Environment tasks"
+  default_prompt: "Use $capture-environment to run this workflow on the files or context I provide."

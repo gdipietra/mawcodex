@@ -1,0 +1,4 @@
+interface:
+  display_name: "Power Analysis"
+  short_description: "Compute reproducible ex-ante power, N, or MDE"
+  default_prompt: "Use $power-analysis to calculate and document the ex-ante power or MDE for this study design."

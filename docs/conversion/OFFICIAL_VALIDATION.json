@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "package_version": "1.2.0",
+  "generated_at": "2026-07-28T14:35:22.832511+00:00",
+  "plugin_validator": {
+    "result": "PASS",
+    "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\plugin-creator\\scripts\\validate_plugin.py",
+    "validator_sha256": "4e84c911479e4d158d723ed8ccc881d3499e580fbf5650e60d379a1a25ac3186"
+  },
+  "skill_validator": {
+    "result": "PASS",
+    "passed": 58,
+    "total": 58,
+    "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+    "validator_sha256": "5347a0a09cfb546bba1c0d1a30dae0a233d9a05f57bd4e7877155c588bcdabf7"
+  },
+  "source_contract": {
+    "result": "PASS",
+    "commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
+    "path": "C:\\GitHub\\claude-code-my-workflow",
+    "origin": "https://github.com/dipietra/claude-code-my-workflow.git",
+    "upstream": "https://github.com/pedrohcgs/claude-code-my-workflow.git"
+  },
+  "unit_tests": {
+    "result": "PASS",
+    "count": 48,
+    "skipped": 0
+  },
+  "release_snapshot": {
+    "algorithm": "sha256",
+    "digest": "a79b825e2749ebef81460017c6d410fe779b817be856abd14b3506191e938705",
+    "file_count": 429
+  }
+}

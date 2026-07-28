@@ -1,0 +1,5 @@
+name = "humanize_auditor"
+description = "Read-only auditor for AI-voice tells in academic prose. Reviews `.tex`, `.qmd`, `.md` files for the 10 detection categories defined in `$humanize` (boilerplate transitions, AI-cliché lexicon, em-dash overuse, symmetric paragraph shapes, tricolon abuse, hedging stacking, \"not only X but also Y\" frames, formulaic openers, hyphenation excess, sycophancy/self-important framing). Produces a structured report without editing. Use when invoked by `$humanize`."
+model_reasoning_effort = "high"
+sandbox_mode = "read-only"
+developer_instructions = "Resolve the repository root, then read and follow `references/agent-roles/humanize-auditor.md` completely. Stay within that narrow role, cite concrete evidence, distinguish PASS, FAIL, and UNVERIFIED, and return findings to the parent. Do not expand scope or perform external actions."

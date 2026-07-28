@@ -1,0 +1,4 @@
+interface:
+  display_name: "New Diagram"
+  short_description: "Create and visually verify a TikZ diagram"
+  default_prompt: "Use $new-diagram to adapt a packaged TikZ snippet to this diagram and verify the render."

@@ -1,0 +1,5 @@
+name = "beamer_translator"
+description = "Specialist agent for translating Beamer LaTeX slides to Quarto RevealJS. Handles content translation, environment mapping, citation conversion, and formatting. Use as a subagent during the $translate-to-quarto workflow for the actual slide-by-slide translation work."
+model_reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
+developer_instructions = "Resolve the repository root, then read and follow `references/agent-roles/beamer-translator.md` completely. Stay within that narrow role, cite concrete evidence, distinguish PASS, FAIL, and UNVERIFIED, and return findings to the parent. Do not expand scope or perform external actions."

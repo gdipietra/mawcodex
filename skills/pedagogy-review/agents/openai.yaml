@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pedagogy Review"
+  short_description: "Review whether a lecture deck teaches effectively"
+  default_prompt: "Use $pedagogy-review to assess this deck from a student-learning perspective without editing it."

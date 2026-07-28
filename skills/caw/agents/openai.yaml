@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAW - Coordinate Academic Workflow"
+  short_description: "Route work across MAW and other capabilities"
+  default_prompt: "Use $caw to assign capability ownership and resolve workflow conflicts for this task."

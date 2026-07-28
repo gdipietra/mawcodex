@@ -1,0 +1,4 @@
+interface:
+  display_name: "Promote Memory"
+  short_description: "Review memory candidates with five independent critics"
+  default_prompt: "Use $promote-memory to review these local learnings and propose which should enter shared memory."

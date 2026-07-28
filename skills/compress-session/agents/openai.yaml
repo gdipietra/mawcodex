@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compress Session"
+  short_description: "Help with Compress Session tasks"
+  default_prompt: "Use $compress-session to run this workflow on the files or context I provide."

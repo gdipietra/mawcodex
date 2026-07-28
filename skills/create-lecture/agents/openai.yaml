@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Lecture"
+  short_description: "Help with Create Lecture tasks"
+  default_prompt: "Use $create-lecture to run this workflow on the files or context I provide."

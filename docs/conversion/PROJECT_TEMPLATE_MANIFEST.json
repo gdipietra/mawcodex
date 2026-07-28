@@ -1,0 +1,257 @@
+{
+  "schema_version": 2,
+  "source_repository": "https://github.com/pedrohcgs/claude-code-my-workflow",
+  "source_commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
+  "generated_by": "scripts/migrate_project_template.py",
+  "files": [
+    {
+      "source": "Bibliography_base.bib",
+      "source_sha256": "2e972222e0fd9a3dbb0a9c61f555bd1544c3da8495ccbd898e6687fb75486d48",
+      "target": "assets/project-template/Bibliography_base.bib",
+      "target_sha256": "2e972222e0fd9a3dbb0a9c61f555bd1544c3da8495ccbd898e6687fb75486d48",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "Preambles/header.tex",
+      "source_sha256": "999fc2107e4fd289443f73e8bc915e5463c14bb2a3eeb7df2b8920530ea6c52e",
+      "target": "assets/project-template/Preambles/header.tex",
+      "target_sha256": "21be7624abb8f5589870e4104a76f73953c427fea351831dc124d30528169716",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/compile-latex",
+          "to": "$compile-latex",
+          "count": 2
+        },
+        {
+          "from": "scripts/check-palette-sync.sh",
+          "to": "scripts/check-palette-sync.py",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "source": "Preambles/README.md",
+      "source_sha256": "7927092c19e6428f472724fc96cea322b7f68e3eeb56b5c3f628bf1ac77f68a6",
+      "target": "assets/project-template/Preambles/README.md",
+      "target_sha256": "84465afd27c0e73e42492deda3fcbfc68f70e6468b0740c10be6d0dc0676b9c8",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/compile-latex",
+          "to": "$compile-latex",
+          "count": 1
+        },
+        {
+          "from": "scripts/check-palette-sync.sh",
+          "to": "scripts/check-palette-sync.py",
+          "count": 3
+        },
+        {
+          "from": "./scripts/check-palette-sync.py",
+          "to": "python scripts/check-palette-sync.py",
+          "count": 2
+        },
+        {
+          "from": "./scripts/validate-setup.sh",
+          "to": "python scripts/validate-project.py",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "Quarto/HelloWorld.qmd",
+      "source_sha256": "5de915c64f04734502178985b2f650b8fc32a45bd58890a57f1a516d96904d4e",
+      "target": "assets/project-template/Quarto/HelloWorld.qmd",
+      "target_sha256": "1634d293c69defc5ce30cb6b297feea6e507f54b4ceef06cc05fee07ed22c554",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/deploy",
+          "to": "$deploy",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "source": "Quarto/theme-template.scss",
+      "source_sha256": "b3941fbcc2fe666ef5692b4634f0a3fc5d6d5b2a609bcc4f9f4513a5a9376065",
+      "target": "assets/project-template/Quarto/theme-template.scss",
+      "target_sha256": "b3941fbcc2fe666ef5692b4634f0a3fc5d6d5b2a609bcc4f9f4513a5a9376065",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "Slides/HelloWorld.tex",
+      "source_sha256": "8998458d3f853dbb06d33da4de34c37de263aa4d943407cd3c6bf635aa03525b",
+      "target": "assets/project-template/Slides/HelloWorld.tex",
+      "target_sha256": "faf3b3b9be9965ee9a5da61dd691e96bfaf8a5ca281d05cb404eccb14023f9d6",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/translate-to-quarto",
+          "to": "$translate-to-quarto",
+          "count": 1
+        },
+        {
+          "from": "/compile-latex",
+          "to": "$compile-latex",
+          "count": 3
+        },
+        {
+          "operation": "escape-tex-skill-invocations",
+          "from": "$skill in TeX content",
+          "to": "\\$skill",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "source": "scripts/R/00_run_all.R",
+      "source_sha256": "087bf68747366e9d06e999a64113d8f87ad8481e5897b47b7d903e7363c32c52",
+      "target": "assets/project-template/scripts/R/00_run_all.R",
+      "target_sha256": "739bb5dcc2a415b80a559865be14a625adfb7d1c566021dbdc2ebd03742d0770",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/audit-reproducibility",
+          "to": "$audit-reproducibility",
+          "count": 1
+        },
+        {
+          "from": "/review-r",
+          "to": "$review-r",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "scripts/R/01_load.R",
+      "source_sha256": "e40f9fcf241c8d336c604a88ab56c2dad5c364ccb681c089a9e978831197cc63",
+      "target": "assets/project-template/scripts/R/01_load.R",
+      "target_sha256": "e40f9fcf241c8d336c604a88ab56c2dad5c364ccb681c089a9e978831197cc63",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/R/02_clean.R",
+      "source_sha256": "55e23c83b44851a35e96e6d9ed24560ab7def2ae3428f6287216b8627cb651f1",
+      "target": "assets/project-template/scripts/R/02_clean.R",
+      "target_sha256": "55e23c83b44851a35e96e6d9ed24560ab7def2ae3428f6287216b8627cb651f1",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/R/03_analyze.R",
+      "source_sha256": "ff97f1aeacd994ee94af241537dd4e172a184e08c3e5f0d21a671fedf4d893f1",
+      "target": "assets/project-template/scripts/R/03_analyze.R",
+      "target_sha256": "ff97f1aeacd994ee94af241537dd4e172a184e08c3e5f0d21a671fedf4d893f1",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/R/04_tables.R",
+      "source_sha256": "0de83ea839de7c94f699b0dafbda8e3b7ebc85b5ebc5fee393d0564e4d1e9e63",
+      "target": "assets/project-template/scripts/R/04_tables.R",
+      "target_sha256": "0de83ea839de7c94f699b0dafbda8e3b7ebc85b5ebc5fee393d0564e4d1e9e63",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/R/05_figures.R",
+      "source_sha256": "862d05404e158f1046bbc6a24dfac553a9b26d427b12d2061ce8ad00ff1ac224",
+      "target": "assets/project-template/scripts/R/05_figures.R",
+      "target_sha256": "862d05404e158f1046bbc6a24dfac553a9b26d427b12d2061ce8ad00ff1ac224",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/R/README.md",
+      "source_sha256": "2b23d8a43d9e41d7f2388a6b7e2eb5d6cc279d213dca792eb65fbb107e2a3619",
+      "target": "assets/project-template/scripts/R/README.md",
+      "target_sha256": "0eaeda823f2403eaed0b61dfe3066e470be1c441e9dd4634991ffaaaf3913980",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/audit-reproducibility",
+          "to": "$audit-reproducibility",
+          "count": 1
+        },
+        {
+          "from": "/review-r",
+          "to": "$review-r",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "source": "scripts/check-palette-sync.py",
+      "source_sha256": "08451cded4a5f86fa774cbf4edaf0666fa0f52764449011d123a9db437dec47d",
+      "target": "assets/project-template/scripts/check-palette-sync.py",
+      "target_sha256": "08451cded4a5f86fa774cbf4edaf0666fa0f52764449011d123a9db437dec47d",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    },
+    {
+      "source": "scripts/check-tikz-prevention.py",
+      "source_sha256": "84f506eafc5254a30b167df747e83ca718b4e1e0e6e020da797eefe80d46f94b",
+      "target": "assets/project-template/scripts/check-tikz-prevention.py",
+      "target_sha256": "42c35cb11cc0caa1ee8dd9de72e9a02702c0086e657d496e1cef3960da707c01",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "/extract-tikz",
+          "to": "$extract-tikz",
+          "count": 1
+        },
+        {
+          "from": "/new-diagram",
+          "to": "$new-diagram",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "scripts/quality_score.py",
+      "source_sha256": "3504dcf9269c7390cc437c3412ff994e9411416cddce91c0f243cced6ea43e34",
+      "target": "assets/project-template/scripts/quality_score.py",
+      "target_sha256": "7c79709bfcb2ed1a84354fe35bd8e328001045edb14fe0e1e124dcc388da0a1a",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": ".claude/rules/quality-gates.md",
+          "to": "references/rules/quality-gates.md",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "explorations/README.md",
+      "source_sha256": "a3644b106d1d31ae7770ae5ee6a7726eb7134984aa3af76c3212165aca7bb0f7",
+      "target": "assets/project-template/explorations/README.md",
+      "target_sha256": "97d82e79fc616b23d5c5a1ceeb4e6c3d57f8b247bfb28b6e79da28f599405e1d",
+      "hash_mode": "utf-8-lf",
+      "replacements": [
+        {
+          "from": "- See `.claude/rules/exploration-folder-protocol.md` for the full protocol",
+          "to": "- Use the MAW Codex exploration-folder protocol for the full rules",
+          "count": 1
+        },
+        {
+          "from": "- See `.claude/rules/exploration-fast-track.md` for the lightweight workflow",
+          "to": "- Use the MAW Codex exploration fast track for lightweight work",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "source": "quality_reports/did_validation.md",
+      "source_sha256": "3afcb97ee4aca690ad50c01a857b092e5384d31dabcb149fa94f575790a5c7cd",
+      "target": "docs/conversion/upstream-evidence/did-event-study-validation.md",
+      "target_sha256": "3afcb97ee4aca690ad50c01a857b092e5384d31dabcb149fa94f575790a5c7cd",
+      "hash_mode": "utf-8-lf",
+      "replacements": []
+    }
+  ]
+}

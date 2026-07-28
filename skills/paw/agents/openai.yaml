@@ -1,0 +1,4 @@
+interface:
+  display_name: "PAW - Personalize Academic Workflow"
+  short_description: "Maintain the project MAW profile overlay"
+  default_prompt: "Use $paw to personalize MAW for this project while preserving team and local boundaries."

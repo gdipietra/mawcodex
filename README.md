@@ -1,0 +1,124 @@
+# MAW Codex
+
+MAW Codex is a Codex-native academic-workflow package derived from
+[pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow).
+It preserves the original plan-implement-verify discipline, adversarial review
+patterns, reproducibility safeguards, and academic teaching workflows while
+rebuilding their execution surfaces for Codex.
+
+## Current status
+
+Version `1.2.0` is the current stable local package. Its verified inventory is:
+
+- 58 packaged skills: 52 source-derived workflows plus the Codex-native JAW,
+  CAW, PAW, LAW, UAW, and SAW management capabilities;
+- 19 project-scoped custom agents plus portable role definitions, including
+  the native `manageraw` control-plane agent;
+- 32 adapted research and quality rules;
+- 13 mapped provider runtime surfaces, including all 7 hook sources;
+- Codex-native, opt-in lifecycle hooks;
+- reusable academic templates and deterministic validation.
+
+The purple MAW icon, academic pet, and plugin thumbnail in `assets/brand/`
+form the package's original visual identity.
+
+The stable claim, local evidence, and environment-dependent limitations are
+recorded in `docs/conversion/STABILITY.md` and
+`docs/conversion/RELEASE_REPORT.md`.
+
+## Repository roles
+
+`C:\GitHub\claude-code-my-workflow` is the tracked source fork. Its `origin`
+points to Giovanni's fork and its `upstream` points to Pedro's repository.
+`C:\Codex\mawcodex` is the independent Codex-native implementation.
+
+The source clone is never edited during conversion. This separation makes
+upstream changes easy to fetch, compare, and selectively port.
+
+## Architecture
+
+- `skills/` contains installable Codex skills.
+- `.codex/agents/` contains local custom-agent optimizations.
+- `references/agent-roles/` keeps agent behavior portable when custom agents
+  are not installed.
+- `references/rules/` contains the adapted academic governance rules.
+- `hooks/` contains optional hooks that Codex runs only after user trust.
+- `assets/templates/` contains reusable project artifacts.
+- `assets/project-template/` contains the installable academic-project
+  skeleton: R pipeline, Beamer/Quarto surfaces, governance folders, and
+  non-mutating local checks.
+- `docs/conversion/` contains the auditable conversion record.
+
+ManageRAW keeps shared project decisions in tracked `.maw/profile.yaml`,
+personal non-weakening choices in ignored `.maw/local.yaml`, and actual Codex
+instruction authority in root and nested `AGENTS.md`.
+
+For an ongoing project, begin with `$jaw`. After readiness is established,
+use `$caw` for plugin ownership, `$paw` for project settings, and `$law` for
+root or nested instructions. `$uaw` and `$saw` are explicit-only maintenance
+operations. The `manageraw` project agent coordinates these capabilities when
+the full or selected agent configuration is installed.
+
+## Initialize an academic project
+
+Preview and install the package through the canonical local marketplace:
+
+```powershell
+.\scripts\maw.cmd install
+.\scripts\maw.cmd install --apply
+```
+
+Restart Codex, enable MAW Codex from the local marketplace shown in the app,
+then use the initializer for each research project. See `docs/INSTALL.md` for
+the complete workflow, including hook trust and source-role setup.
+
+Preview the complete file plan:
+
+```powershell
+.\scripts\maw.cmd init C:\Codex\my-paper --dry-run
+```
+
+Then initialize the project and its local Git repository:
+
+```powershell
+.\scripts\maw.cmd init C:\Codex\my-paper --git-init
+```
+
+The initializer includes all 19 project custom agents, portable rules and
+roles, and the 21 artifact templates by default. It never overwrites a
+differing file. Use `--merge` only to add missing files to an existing
+project; conflicts abort before any write.
+
+## Development validation
+
+Run the bundled Python validator:
+
+```powershell
+.\scripts\maw.cmd all
+```
+
+The command validates the exact source-fork contract, runs Codex's official
+plugin and skill validators, executes the behavioral tests, records the
+evidence, and checks manifest structure, custom-agent TOML, references,
+provenance, links, and provider-specific residue.
+
+## Upstream updates
+
+See `docs/UPSTREAM_SYNC.md`. The short form is: fetch `upstream` in the source
+fork, compare the recorded baseline with the new tag or commit, update the
+component inventory, and port only reviewed deltas into this repository.
+
+The safe local check is:
+
+```powershell
+.\scripts\maw.cmd source-status
+```
+
+Add `--fetch` only when you intend to contact GitHub. It updates remote refs
+but never merges them or changes the fixed source checkout.
+
+## License and attribution
+
+MAW Codex is distributed under the MIT License. Substantial portions are
+adapted from Pedro H. C. Sant'Anna's MIT-licensed workflow. See `NOTICE.md` and
+the per-component conversion records for upstream and third-party attribution.

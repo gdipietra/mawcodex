@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA Quarto"
+  short_description: "Run adversarial Quarto and Beamer parity QA"
+  default_prompt: "Use $qa-quarto to compare this Quarto deck with its Beamer reference and iterate on verified fixes."

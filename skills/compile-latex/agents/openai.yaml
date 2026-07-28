@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compile Latex"
+  short_description: "Help with Compile Latex tasks"
+  default_prompt: "Use $compile-latex to run this workflow on the files or context I provide."

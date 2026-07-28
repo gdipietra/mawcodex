@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "project": {
+    "slug": null,
+    "type": null,
+    "classification_status": "unconfirmed",
+    "primary_language": null
+  },
+  "maw": {
+    "base_version": "1.2.0",
+    "adoption": "full",
+    "governance_owner": "mawcodex",
+    "manager_agent": "manageraw"
+  },
+  "instruction_layers": {
+    "global": {
+      "policy": "inherit",
+      "managed": false
+    },
+    "project": {
+      "path": "AGENTS.md",
+      "owner": "team",
+      "managed_block": "manageraw"
+    },
+    "nested": [],
+    "personal": {
+      "path": ".maw/local.yaml",
+      "tracked": false
+    }
+  },
+  "capability_ownership": [
+    {
+      "capability": "academic_governance",
+      "owner": "mawcodex",
+      "priority": "primary"
+    },
+    {
+      "capability": "project_onboarding",
+      "owner": "mawcodex:jaw",
+      "priority": "primary"
+    },
+    {
+      "capability": "plugin_coordination",
+      "owner": "mawcodex:caw",
+      "priority": "primary"
+    },
+    {
+      "capability": "project_personalization",
+      "owner": "mawcodex:paw",
+      "priority": "primary"
+    },
+    {
+      "capability": "instruction_layering",
+      "owner": "mawcodex:law",
+      "priority": "primary"
+    },
+    {
+      "capability": "workflow_updates",
+      "owner": "mawcodex:uaw",
+      "priority": "primary"
+    },
+    {
+      "capability": "reusable_pattern_export",
+      "owner": "mawcodex:saw",
+      "priority": "primary"
+    },
+    {
+      "capability": "external_operations",
+      "owner": "unassigned",
+      "priority": "specialist"
+    }
+  ],
+  "external_plugins": [],
+  "skill_policy": {
+    "preferred": [
+      "caw",
+      "jaw",
+      "paw",
+      "law"
+    ],
+    "explicit_only": [
+      "uaw",
+      "saw"
+    ],
+    "disabled": [],
+    "project_local": []
+  },
+  "source_roles": [],
+  "build_profiles": [],
+  "protected_material": [],
+  "personalization": {
+    "team": {},
+    "personal_file": ".maw/local.yaml"
+  }
+}

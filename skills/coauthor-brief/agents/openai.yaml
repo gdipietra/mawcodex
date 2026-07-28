@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coauthor Brief"
+  short_description: "Help with Coauthor Brief tasks"
+  default_prompt: "Use $coauthor-brief to run this workflow on the files or context I provide."

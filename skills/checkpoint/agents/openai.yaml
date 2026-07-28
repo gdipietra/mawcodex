@@ -1,0 +1,4 @@
+interface:
+  display_name: "Checkpoint"
+  short_description: "Help with Checkpoint tasks"
+  default_prompt: "Use $checkpoint to run this workflow on the files or context I provide."

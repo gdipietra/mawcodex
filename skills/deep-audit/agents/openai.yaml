@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deep Audit"
+  short_description: "Help with Deep Audit tasks"
+  default_prompt: "Use $deep-audit to run this workflow on the files or context I provide."

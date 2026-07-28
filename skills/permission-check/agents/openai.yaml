@@ -1,0 +1,4 @@
+interface:
+  display_name: "Permission Check"
+  short_description: "Diagnose Codex permission and approval behavior"
+  default_prompt: "Use $permission-check to explain why this Codex action is prompting for approval."

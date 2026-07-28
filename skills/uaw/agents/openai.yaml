@@ -1,0 +1,8 @@
+interface:
+  display_name: "UAW - Update Academic Workflow"
+  short_description: "Reconcile requested MAW updates safely"
+  default_prompt: "Use $uaw to compare this project's pinned MAW base with a requested update and propose a safe reconciliation."
+
+policy:
+  allow_implicit_invocation: false
+

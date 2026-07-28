@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy"
+  short_description: "Help with Deploy tasks and workflows"
+  default_prompt: "Use $deploy to run this workflow on the files or context I provide."

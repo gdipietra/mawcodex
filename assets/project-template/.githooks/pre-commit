@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# Version-controlled, non-mutating academic project quality gate.
+set -u
+
+if command -v python3 >/dev/null 2>&1; then
+    exec python3 scripts/project_precommit.py
+fi
+if command -v python >/dev/null 2>&1; then
+    exec python scripts/project_precommit.py
+fi
+
+echo "pre-commit: Python 3 is required for project checks" >&2
+exit 2

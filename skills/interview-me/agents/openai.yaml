@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Interview"
+  short_description: "Turn a fuzzy research idea into a rigorous spec"
+  default_prompt: "Use $interview-me to interview me about this research idea and save a structured specification."

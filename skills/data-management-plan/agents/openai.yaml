@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Management Plan"
+  short_description: "Help with Data Management Plan tasks"
+  default_prompt: "Use $data-management-plan to run this workflow on the files or context I provide."

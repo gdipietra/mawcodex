@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devils Advocate"
+  short_description: "Help with Devils Advocate tasks"
+  default_prompt: "Use $devils-advocate to run this workflow on the files or context I provide."

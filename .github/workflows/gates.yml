@@ -1,0 +1,38 @@
+name: stable-gates
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      MAWCODEX_SOURCE_CLONE: ${{ github.workspace }}/.source-baseline
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check out the fixed upstream source baseline
+        uses: actions/checkout@v7
+        with:
+          repository: pedrohcgs/claude-code-my-workflow
+          ref: be53c12f235996dff41fb7f21580506fd2dd8d50
+          path: .source-baseline
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Validate portable stable evidence
+        run: python scripts/validate_package.py --release
+      - name: Run behavioral tests
+        run: python -m unittest discover -v

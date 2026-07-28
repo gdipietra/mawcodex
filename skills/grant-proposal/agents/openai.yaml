@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Proposal"
+  short_description: "Draft coherent, source-grounded grant proposals"
+  default_prompt: "Use $grant-proposal to turn my research spec into a verified funder-shaped draft and checklist."

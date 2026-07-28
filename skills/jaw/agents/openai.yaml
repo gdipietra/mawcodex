@@ -1,0 +1,7 @@
+interface:
+  display_name: "JAW - Join Academic Workflow"
+  short_description: "Safely fit MAW into an ongoing project"
+  default_prompt: "Use $jaw to assess this project and propose its safest initial MAW adoption."
+  icon_small: "./assets/maw-icon.png"
+  icon_large: "./assets/maw-pet.png"
+  brand_color: "#9B4AC3"

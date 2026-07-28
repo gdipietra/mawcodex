@@ -1,0 +1,4 @@
+interface:
+  display_name: "Did Event Study"
+  short_description: "Help with Did Event Study tasks"
+  default_prompt: "Use $did-event-study to run this workflow on the files or context I provide."

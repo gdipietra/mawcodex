@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose"
+  short_description: "Help with Diagnose tasks and workflows"
+  default_prompt: "Use $diagnose to run this workflow on the files or context I provide."

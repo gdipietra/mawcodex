@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If MAW Codex contributed to your research workflow, cite this software and its upstream source."
+title: "MAW Codex: verification-gated academic workflows for Codex"
+type: software
+authors:
+  - family-names: "Di Pietra"
+    given-names: "Giovanni"
+license: MIT
+version: 1.2.0
+date-released: 2026-07-28
+keywords:
+  - codex
+  - academic-research
+  - economics
+  - econometrics
+  - reproducible-research
+  - causal-inference
+  - academic-writing
+abstract: >-
+  A Codex-native package for planning, executing, reviewing, and verifying
+  academic research, empirical analysis, manuscripts, replication packages,
+  and teaching materials.
+references:
+  - type: software
+    title: "Claude Code Academic Workflow"
+    authors:
+      - family-names: "Sant'Anna"
+        given-names: "Pedro H. C."
+    url: "https://github.com/pedrohcgs/claude-code-my-workflow"
+    version: "2.1.0"

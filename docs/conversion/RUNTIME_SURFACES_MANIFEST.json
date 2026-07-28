@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/pedrohcgs/claude-code-my-workflow",
+  "source_commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
+  "generated_by": "scripts/refresh_runtime_surface_manifest.py",
+  "counts": {
+    "core": 6,
+    "hook": 7
+  },
+  "surfaces": [
+    {
+      "kind": "core",
+      "name": "root-instructions",
+      "source": "CLAUDE.md",
+      "classification": "composed replacement",
+      "disposition": "native instruction hierarchy",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Split provider root instructions into package maintenance instructions and project research instructions, adding explicit Codex authority and verification boundaries.",
+      "source_sha256": "82615568023b0fa4112759e2d803d9abe07256f5a2bc2af6c9eba490ba5be6c6",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "8fd3c3fd68cc31aed187bdc50a00ea6f170cae73a1b4187aabdbe78ef4bf17d5"
+        },
+        {
+          "path": "assets/project-template/AGENTS.md",
+          "sha256": "1e1beaba7734e70aadcf1f56053e4a7a9602c9ffecb161d6813a536081014996"
+        }
+      ]
+    },
+    {
+      "kind": "core",
+      "name": "settings",
+      "source": ".claude/settings.json",
+      "classification": "native rewrite",
+      "disposition": "safe native configuration",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Replaced provider hooks and planning settings with current Codex configuration while deliberately omitting permission bypass and broad filesystem, shell, and network allowlists.",
+      "source_sha256": "40049bb10675326182274bef357a5f91ca8a9237dff923084e414f67b9c49a27",
+      "status": "validated",
+      "targets": [
+        {
+          "path": ".codex/config.toml",
+          "sha256": "5357204e192faa96572f582e0a66ba42004287a005d9f157409cef4777c27e28"
+        },
+        {
+          "path": "hooks/hooks.json",
+          "sha256": "db3156a65ff9f6a05f38d6180e5ba6b18ddf6271b12c9b11de7d77b24aef062e"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "8fd3c3fd68cc31aed187bdc50a00ea6f170cae73a1b4187aabdbe78ef4bf17d5"
+        }
+      ]
+    },
+    {
+      "kind": "core",
+      "name": "academic-writing-output-style",
+      "source": ".claude/output-styles/academic-writing.md",
+      "classification": "composed replacement",
+      "disposition": "portable writing rules and skills",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Composed the concise academic voice, evidence calibration, notation, and anti-fabrication intent into portable formatting guidance plus humanization and proofreading workflows.",
+      "source_sha256": "354210fb2e91788a82ddf77aab6705054221179e4c8d014e65d9818f84e657c6",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "references/prompt-formatting-core.md",
+          "sha256": "a239c6b9929788d162c1d03a19b6bd3ddd0c2ce4f9023f14cddafcad21bdb865"
+        },
+        {
+          "path": "skills/humanize/SKILL.md",
+          "sha256": "a8fca16290eff94d71f59f9c0023d5dbc129d8f37a1985ccbdd9f4c5ddc315e6"
+        },
+        {
+          "path": "skills/proofread/SKILL.md",
+          "sha256": "bc5406fe0e191bfe5211281bf1df068d7e82d9486eb310fed466c6339e03cd4e"
+        }
+      ]
+    },
+    {
+      "kind": "core",
+      "name": "referee-output-style",
+      "source": ".claude/output-styles/referee.md",
+      "classification": "composed replacement",
+      "disposition": "review skill and portable referee role",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Moved terse evidence-backed referee structure, fatal-versus-fixable triage, and constructive asks into the review workflow and its independent portable referee role.",
+      "source_sha256": "ccd3148008f5b0b17d1b98f1b715d516cdaef7bffb93578afbc811e8a337864c",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "skills/review-paper/SKILL.md",
+          "sha256": "26d5f85dd3cd10b8641e3bf9ac886b92c54b8bdb8fc886d6463d7dac981c068e"
+        },
+        {
+          "path": "references/agent-roles/domain-referee.md",
+          "sha256": "1e6eef577380275ccef28090fa5072f40a105a76485e858194558fc68ea132d7"
+        }
+      ]
+    },
+    {
+      "kind": "core",
+      "name": "status-line",
+      "source": ".claude/scripts/statusline.sh",
+      "classification": "composed replacement",
+      "disposition": "visible Codex state and context workflow",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Replaced provider session JSON, permission badges, and private context files with visible Codex task state, explicit context status, and durable compaction pointers.",
+      "source_sha256": "919ffb9861e2c62e323c1f73b2c470dda80f52c95dcd90ed33789151889042e5",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "skills/context-status/SKILL.md",
+          "sha256": "409858474e8d0886b1231bf3842f09ca3edb7ae5ae31d2b1d02c2d6cd21867b7"
+        },
+        {
+          "path": "docs/conversion/HOOK_MAP.md",
+          "sha256": "4d9a6550344dd3774e0fefd9c8dc26480a1d9197dce767c215541da8ea81c633"
+        }
+      ]
+    },
+    {
+      "kind": "core",
+      "name": "workflow-quick-reference",
+      "source": ".claude/WORKFLOW_QUICK_REF.md",
+      "classification": "composed replacement",
+      "disposition": "package instructions and portable rules",
+      "revision_record": "docs/conversion/CORE_SURFACE_MAP.md",
+      "revision_summary": "Retained the plan, execute, verify, report loop and quality-gate intent while replacing provider model and auto-deploy language with explicit Codex authorization boundaries.",
+      "source_sha256": "8bbcac568375ec4958749aef0ddcaa1252f025193a40ddcc2e980ac709e381ed",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "8fd3c3fd68cc31aed187bdc50a00ea6f170cae73a1b4187aabdbe78ef4bf17d5"
+        },
+        {
+          "path": "README.md",
+          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+        },
+        {
+          "path": "references/rules/plan-first-workflow.md",
+          "sha256": "acdd368df3dc38b1aa566efd7fefbb639b72cec67753c12a56b15e11007e5123"
+        },
+        {
+          "path": "references/rules/quality-gates.md",
+          "sha256": "8ea2853e0c7ae4b87017a9f0e0bee7553150937b5c031762d9c4396dcec30935"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "git-guardrails",
+      "source": ".claude/hooks/git-guardrails.py",
+      "classification": "native rewrite",
+      "disposition": "enabled PreToolUse hook",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Reimplemented destructive Git and machine-path guardrails for current Codex hook input, cross-platform execution, quoted arguments, and compound command handling.",
+      "source_sha256": "d9d3290f2560221189ba30e0fd6ff86ef5adbf62f114bc18b35f69fe0a355bb9",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "hooks/hooks.json",
+          "sha256": "db3156a65ff9f6a05f38d6180e5ba6b18ddf6271b12c9b11de7d77b24aef062e"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.py",
+          "sha256": "ce980b3309558b97a57ce4595c4882b345c6b9df087225e522e58bdea726fdd6"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.ps1",
+          "sha256": "faf215c5cd5cf2d0e17a03541718c94dc5e2c5a0b94520c6aa1a4adbdf24a036"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.sh",
+          "sha256": "a64e6fcdb8cf0a73fb94e3dff0439ed4eda76550f5e980c7aaa4b803fb67f6c3"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "claim-reconcile",
+      "source": ".claude/hooks/claim-reconcile.py",
+      "classification": "native rewrite",
+      "disposition": "enabled PostToolUse hook",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Reimplemented claim staleness as a local advisory Codex hook that records no transcript content and never asserts that an estimate changed without rerunning the analysis.",
+      "source_sha256": "565c5abb0e1addf7d40b14aac5b736f647970893b9f8f56fc8b4e1e16a8e926d",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "hooks/hooks.json",
+          "sha256": "db3156a65ff9f6a05f38d6180e5ba6b18ddf6271b12c9b11de7d77b24aef062e"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.py",
+          "sha256": "ce980b3309558b97a57ce4595c4882b345c6b9df087225e522e58bdea726fdd6"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.ps1",
+          "sha256": "faf215c5cd5cf2d0e17a03541718c94dc5e2c5a0b94520c6aa1a4adbdf24a036"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "pre-compact",
+      "source": ".claude/hooks/pre-compact.py",
+      "classification": "native rewrite",
+      "disposition": "enabled PreCompact hook",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Reimplemented compaction preparation using current Codex event fields and minimal plan and session-log pointers stored under plugin data rather than private transcript state.",
+      "source_sha256": "6cb5fc0b0be5f8fc72e65c67f7fbabfaf3b46d49b768d8eda167de8d90878a57",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "hooks/hooks.json",
+          "sha256": "db3156a65ff9f6a05f38d6180e5ba6b18ddf6271b12c9b11de7d77b24aef062e"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.py",
+          "sha256": "ce980b3309558b97a57ce4595c4882b345c6b9df087225e522e58bdea726fdd6"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.ps1",
+          "sha256": "faf215c5cd5cf2d0e17a03541718c94dc5e2c5a0b94520c6aa1a4adbdf24a036"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "post-compact-restore",
+      "source": ".claude/hooks/post-compact-restore.py",
+      "classification": "native rewrite",
+      "disposition": "enabled SessionStart hook",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Reimplemented context restoration as a compact or resume SessionStart handoff that reloads durable pointers and requires fresh Git state inspection before work continues.",
+      "source_sha256": "867ce33f5d84b4bf83a54c73258912efe09463a5cc4e771a3a08bc8277aea20f",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "hooks/hooks.json",
+          "sha256": "db3156a65ff9f6a05f38d6180e5ba6b18ddf6271b12c9b11de7d77b24aef062e"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.py",
+          "sha256": "ce980b3309558b97a57ce4595c4882b345c6b9df087225e522e58bdea726fdd6"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.ps1",
+          "sha256": "faf215c5cd5cf2d0e17a03541718c94dc5e2c5a0b94520c6aa1a4adbdf24a036"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "context-monitor",
+      "source": ".claude/hooks/context-monitor.py",
+      "classification": "composed replacement",
+      "disposition": "native context UI and explicit workflow",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Replaced undocumented transcript token estimation with Codex context UI, explicit status reporting, and supported compaction hooks while preserving durable continuity.",
+      "source_sha256": "d0b50a80ec91a81d69e9507b1f86eed0b6e01f5ee8db1482dbe1dac44d4f1ca1",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "skills/context-status/SKILL.md",
+          "sha256": "409858474e8d0886b1231bf3842f09ca3edb7ae5ae31d2b1d02c2d6cd21867b7"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.py",
+          "sha256": "ce980b3309558b97a57ce4595c4882b345c6b9df087225e522e58bdea726fdd6"
+        },
+        {
+          "path": "hooks/scripts/maw_hook.ps1",
+          "sha256": "faf215c5cd5cf2d0e17a03541718c94dc5e2c5a0b94520c6aa1a4adbdf24a036"
+        },
+        {
+          "path": "docs/conversion/HOOK_MAP.md",
+          "sha256": "4d9a6550344dd3774e0fefd9c8dc26480a1d9197dce767c215541da8ea81c633"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "log-reminder",
+      "source": ".claude/hooks/log-reminder.py",
+      "classification": "composed replacement",
+      "disposition": "explicit checkpoint and session logging",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Replaced automatic stop-time project writes with explicit checkpoint and compression workflows plus portable session logging rules that remain reviewable.",
+      "source_sha256": "43b8ab2404f20ed407f58a61cfac16d487531e05d45af5dcbd1b212002dc0bff",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "skills/checkpoint/SKILL.md",
+          "sha256": "597abeb5283225dae96f8cd723c231b893180cfa4d6fae2f27a2580cff796689"
+        },
+        {
+          "path": "skills/compress-session/SKILL.md",
+          "sha256": "f1977b3bf8f50c6a3d2ae0197d259a91977ffb40b68930105144be078de697bc"
+        },
+        {
+          "path": "references/rules/session-logging.md",
+          "sha256": "59b3d72c8d27764f14bde92099a46cefe09972b69e294608ed6583a2adefc130"
+        },
+        {
+          "path": "docs/conversion/HOOK_MAP.md",
+          "sha256": "4d9a6550344dd3774e0fefd9c8dc26480a1d9197dce767c215541da8ea81c633"
+        }
+      ]
+    },
+    {
+      "kind": "hook",
+      "name": "notify",
+      "source": ".claude/hooks/notify.sh",
+      "classification": "composed replacement",
+      "disposition": "host notification surface",
+      "revision_record": "docs/conversion/HOOK_MAP.md",
+      "revision_summary": "Replaced shell-specific desktop notification commands with the Codex host notification surface or an explicitly authorized user automation, without silently spawning background tools.",
+      "source_sha256": "9788d78a08b59a5f41b870a1723f7d1880995e405a0836c644be03a800c28814",
+      "status": "validated",
+      "targets": [
+        {
+          "path": "docs/conversion/HOOK_MAP.md",
+          "sha256": "4d9a6550344dd3774e0fefd9c8dc26480a1d9197dce767c215541da8ea81c633"
+        }
+      ]
+    }
+  ]
+}

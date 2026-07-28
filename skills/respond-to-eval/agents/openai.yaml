@@ -1,0 +1,4 @@
+interface:
+  display_name: "Respond to Evaluations"
+  short_description: "Turn course feedback into an evidence-bounded plan"
+  default_prompt: "Use $respond-to-eval to convert these anonymized course evaluations into a verified improvement plan."

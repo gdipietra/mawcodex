@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Reproducibility"
+  short_description: "Help with Audit Reproducibility tasks"
+  default_prompt: "Use $audit-reproducibility to run this workflow on the files or context I provide."

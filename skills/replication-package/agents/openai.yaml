@@ -1,0 +1,4 @@
+interface:
+  display_name: "Replication Package"
+  short_description: "Assemble a verified local research deposit package"
+  default_prompt: "Use $replication-package to assemble a local, provenance-complete deposit for this manuscript."

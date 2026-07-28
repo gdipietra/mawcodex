@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanize"
+  short_description: "Audit prose patterns without inferring authorship"
+  default_prompt: "Use $humanize to audit this draft for repetitive or generic prose patterns without editing it."

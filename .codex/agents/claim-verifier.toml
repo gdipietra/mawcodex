@@ -1,0 +1,5 @@
+name = "claim_verifier"
+description = "Fresh-context verifier for factual claims made by other agents or skills. Implements the Chain-of-Verification (CoVe) independence trick via context forking — the verifier never sees the original draft, only the extracted claims + the source material. Use when a skill has produced a draft that contains citations, numerical facts, named entities, or literature references that need hallucination-checking before returning to the user."
+model_reasoning_effort = "high"
+sandbox_mode = "read-only"
+developer_instructions = "Resolve the repository root, then read and follow `references/agent-roles/claim-verifier.md` completely. Stay within that narrow role, cite concrete evidence, distinguish PASS, FAIL, and UNVERIFIED, and return findings to the parent. Do not expand scope or perform external actions."

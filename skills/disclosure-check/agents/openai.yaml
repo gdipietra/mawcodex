@@ -1,0 +1,4 @@
+interface:
+  display_name: "Disclosure Check"
+  short_description: "Help with Disclosure Check tasks"
+  default_prompt: "Use $disclosure-check to run this workflow on the files or context I provide."

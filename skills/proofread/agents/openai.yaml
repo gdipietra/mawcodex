@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proofread"
+  short_description: "Report grammar, consistency, and render issues"
+  default_prompt: "Use $proofread to produce a read-only correction report for this lecture source."

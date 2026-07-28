@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learn"
+  short_description: "Capture a verified discovery as a reusable skill"
+  default_prompt: "Use $learn to turn the verified workflow from this task into a validated reusable skill."
