@@ -13,7 +13,7 @@ from pathlib import Path
 
 BASELINE_COMMIT = "be53c12f235996dff41fb7f21580506fd2dd8d50"
 EXPECTED_TAG = "v2.1.0"
-EXPECTED_ORIGIN = "https://github.com/dipietra/claude-code-my-workflow"
+EXPECTED_ORIGIN = "https://github.com/gdipietra/claude-code-my-workflow"
 EXPECTED_UPSTREAM = "https://github.com/pedrohcgs/claude-code-my-workflow"
 WINDOWS_DEFAULT = Path(r"C:\GitHub\claude-code-my-workflow")
 

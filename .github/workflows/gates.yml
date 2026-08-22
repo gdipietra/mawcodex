@@ -22,17 +22,31 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - name: Check out the fixed upstream source baseline
+      - name: Check out the fixed source fork
         uses: actions/checkout@v7
         with:
-          repository: pedrohcgs/claude-code-my-workflow
-          ref: be53c12f235996dff41fb7f21580506fd2dd8d50
+          repository: gdipietra/claude-code-my-workflow
+          ref: main
+          fetch-depth: 0
           path: .source-baseline
           persist-credentials: false
+      - name: Configure Pedro upstream
+        working-directory: .source-baseline
+        run: |
+          git remote add upstream https://github.com/pedrohcgs/claude-code-my-workflow.git
+          git fetch upstream main --no-tags
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Verify source clone contract
+        run: python scripts/check_source_clone.py --source .source-baseline
       - name: Validate portable stable evidence
         run: python scripts/validate_package.py --release
+      - name: Run packaged skill validators
+        run: python scripts/run_skill_validators.py
+
+      - name: Validate public site identity
+        run: python scripts/validate_public_site.py
+
       - name: Run behavioral tests
         run: python -m unittest discover -v

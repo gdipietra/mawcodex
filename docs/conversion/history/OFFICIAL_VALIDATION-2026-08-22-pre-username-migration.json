@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "package_version": "1.2.2",
-  "generated_at": "2026-08-22T22:17:14.881038+00:00",
+  "package_version": "1.2.1",
+  "generated_at": "2026-08-22T06:03:07.225413+00:00",
   "plugin_validator": {
     "result": "PASS",
     "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\plugin-creator\\scripts\\validate_plugin.py",
@@ -18,13 +18,8 @@
     "result": "PASS",
     "commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
     "path": "C:\\GitHub\\claude-code-my-workflow",
-    "origin": "https://github.com/gdipietra/claude-code-my-workflow.git",
-    "upstream": "https://github.com/pedrohcgs/claude-code-my-workflow.git",
-    "public_site_validation": {
-      "result": "PASS",
-      "command": "python scripts/validate_public_site.py",
-      "stdout": "PASS  public-site  static files, local links, credits, manifest URLs, 58-skill ledger, and GitHub Pages workflow are consistent\n\nSummary: 1 passed, 0 failed.\nPASS: current GitHub repository and Pages identity"
-    }
+    "origin": "https://github.com/dipietra/claude-code-my-workflow.git",
+    "upstream": "https://github.com/pedrohcgs/claude-code-my-workflow.git"
   },
   "unit_tests": {
     "result": "PASS",
@@ -33,7 +28,7 @@
   },
   "release_snapshot": {
     "algorithm": "sha256",
-    "digest": "3816fe35ca4b6eba6dde2e74101c0b9902c2c57b694fba43f2a5809b88323787",
-    "file_count": 436
+    "digest": "5c025df7441525f572401e10ed387b9bbe7720193aa30ad4132c8f128c1c4b48",
+    "file_count": 434
   }
 }

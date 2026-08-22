@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source_repository": "https://github.com/pedrohcgs/claude-code-my-workflow",
   "source_commit": "be53c12f235996dff41fb7f21580506fd2dd8d50",
   "generated_by": "scripts/migrate_project_template.py",
@@ -10,7 +10,9 @@
       "target": "assets/project-template/Bibliography_base.bib",
       "target_sha256": "2e972222e0fd9a3dbb0a9c61f555bd1544c3da8495ccbd898e6687fb75486d48",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/Bibliography_base.bib unchanged from the fixed baseline."
     },
     {
       "source": "Preambles/header.tex",
@@ -35,7 +37,9 @@
           "to": "guarded fontspec Lato/Helvetica/Arial fallback",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/Preambles/header.tex for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "Preambles/README.md",
@@ -64,7 +68,9 @@
           "to": "python scripts/validate-project.py",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/Preambles/README.md for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "Quarto/HelloWorld.qmd",
@@ -78,7 +84,9 @@
           "to": "$deploy",
           "count": 2
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/Quarto/HelloWorld.qmd for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "Quarto/theme-template.scss",
@@ -86,7 +94,9 @@
       "target": "assets/project-template/Quarto/theme-template.scss",
       "target_sha256": "b3941fbcc2fe666ef5692b4634f0a3fc5d6d5b2a609bcc4f9f4513a5a9376065",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/Quarto/theme-template.scss unchanged from the fixed baseline."
     },
     {
       "source": "Slides/HelloWorld.tex",
@@ -111,7 +121,9 @@
           "to": "\\$skill",
           "count": 3
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/Slides/HelloWorld.tex for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "scripts/R/00_run_all.R",
@@ -130,7 +142,9 @@
           "to": "$review-r",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/scripts/R/00_run_all.R for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "scripts/R/01_load.R",
@@ -138,7 +152,9 @@
       "target": "assets/project-template/scripts/R/01_load.R",
       "target_sha256": "e40f9fcf241c8d336c604a88ab56c2dad5c364ccb681c089a9e978831197cc63",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/R/01_load.R unchanged from the fixed baseline."
     },
     {
       "source": "scripts/R/02_clean.R",
@@ -146,7 +162,9 @@
       "target": "assets/project-template/scripts/R/02_clean.R",
       "target_sha256": "55e23c83b44851a35e96e6d9ed24560ab7def2ae3428f6287216b8627cb651f1",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/R/02_clean.R unchanged from the fixed baseline."
     },
     {
       "source": "scripts/R/03_analyze.R",
@@ -154,7 +172,9 @@
       "target": "assets/project-template/scripts/R/03_analyze.R",
       "target_sha256": "ff97f1aeacd994ee94af241537dd4e172a184e08c3e5f0d21a671fedf4d893f1",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/R/03_analyze.R unchanged from the fixed baseline."
     },
     {
       "source": "scripts/R/04_tables.R",
@@ -162,7 +182,9 @@
       "target": "assets/project-template/scripts/R/04_tables.R",
       "target_sha256": "0de83ea839de7c94f699b0dafbda8e3b7ebc85b5ebc5fee393d0564e4d1e9e63",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/R/04_tables.R unchanged from the fixed baseline."
     },
     {
       "source": "scripts/R/05_figures.R",
@@ -170,7 +192,9 @@
       "target": "assets/project-template/scripts/R/05_figures.R",
       "target_sha256": "862d05404e158f1046bbc6a24dfac553a9b26d427b12d2061ce8ad00ff1ac224",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/R/05_figures.R unchanged from the fixed baseline."
     },
     {
       "source": "scripts/R/README.md",
@@ -189,7 +213,9 @@
           "to": "$review-r",
           "count": 2
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/scripts/R/README.md for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "scripts/check-palette-sync.py",
@@ -197,7 +223,9 @@
       "target": "assets/project-template/scripts/check-palette-sync.py",
       "target_sha256": "08451cded4a5f86fa774cbf4edaf0666fa0f52764449011d123a9db437dec47d",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported assets/project-template/scripts/check-palette-sync.py unchanged from the fixed baseline."
     },
     {
       "source": "scripts/check-tikz-prevention.py",
@@ -216,7 +244,9 @@
           "to": "$new-diagram",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/scripts/check-tikz-prevention.py for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "scripts/quality_score.py",
@@ -230,7 +260,9 @@
           "to": "references/rules/quality-gates.md",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/scripts/quality_score.py for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "explorations/README.md",
@@ -249,7 +281,9 @@
           "to": "- Use the MAW Codex exploration fast track for lightweight work",
           "count": 1
         }
-      ]
+      ],
+      "classification": "native rewrite",
+      "revision_summary": "Adapted assets/project-template/explorations/README.md for Codex-native paths, syntax, and project behavior."
     },
     {
       "source": "quality_reports/did_validation.md",
@@ -257,7 +291,9 @@
       "target": "docs/conversion/upstream-evidence/did-event-study-validation.md",
       "target_sha256": "3afcb97ee4aca690ad50c01a857b092e5384d31dabcb149fa94f575790a5c7cd",
       "hash_mode": "utf-8-lf",
-      "replacements": []
+      "replacements": [],
+      "classification": "direct port",
+      "revision_summary": "Imported docs/conversion/upstream-evidence/did-event-study-validation.md unchanged from the fixed baseline."
     }
   ]
 }

@@ -13,8 +13,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-PUBLIC_ROOT = "https://dipietra.github.io/mawcodex/"
-REPOSITORY = "https://github.com/dipietra/mawcodex"
+PUBLIC_ROOT = "https://gdipietra.github.io/mawcodex/"
+REPOSITORY = "https://github.com/gdipietra/mawcodex"
 REQUIRED_HTML = (
     "index.html",
     "capabilities.html",
@@ -236,6 +236,89 @@ def main() -> int:
     print("\nSummary: 1 passed, 0 failed.")
     return 0
 
+
+
+
+_identity_original_main = main
+
+
+def _validate_current_github_identity() -> list[str]:
+    import json as _json
+    import re as _re
+
+    root = Path(__file__).resolve().parents[1]
+    public_root = "https://gdipietra.github.io/mawcodex/"
+    repository = "https://github.com/gdipietra/mawcodex"
+    author = "https://github.com/gdipietra"
+    retired = ("https://github.com/dipietra", "https://dipietra.github.io")
+    canonical_pages = {
+        "docs/index.html": public_root,
+        "docs/capabilities.html": public_root + "capabilities.html",
+        "docs/credits.html": public_root + "credits.html",
+        "docs/privacy.html": public_root + "privacy.html",
+        "docs/support.html": public_root + "support.html",
+        "docs/terms.html": public_root + "terms.html",
+    }
+    operational = [
+        ".codex-plugin/plugin.json",
+        "README.md",
+        "docs/PUBLISHING.md",
+        "docs/UPSTREAM_SYNC.md",
+        "scripts/check_source_clone.py",
+        *canonical_pages,
+    ]
+    problems: list[str] = []
+
+    manifest_path = root / ".codex-plugin" / "plugin.json"
+    manifest = _json.loads(manifest_path.read_text(encoding="utf-8"))
+    expected = {
+        "repository": repository,
+        "homepage": public_root,
+    }
+    for key, value in expected.items():
+        if manifest.get(key) != value:
+            problems.append(f"plugin {key} must be {value!r}")
+    if not isinstance(manifest.get("author"), dict) or manifest["author"].get("url") != author:
+        problems.append(f"plugin author.url must be {author!r}")
+    index_text = (root / "docs" / "index.html").read_text(encoding="utf-8")
+    visible_release = f"Release {manifest.get('version', '')}"
+    if visible_release not in index_text:
+        problems.append("visible release label must match plugin version")
+
+    for relative, expected_canonical in canonical_pages.items():
+        text = (root / relative).read_text(encoding="utf-8")
+        canonical = None
+        for tag in _re.findall(r"<link\b[^>]*>", text, flags=_re.IGNORECASE):
+            if _re.search(r"\brel=[\"']canonical[\"']", tag, flags=_re.IGNORECASE):
+                match = _re.search(r"\bhref=[\"']([^\"']+)[\"']", tag, flags=_re.IGNORECASE)
+                if match:
+                    canonical = match.group(1)
+                    break
+        if canonical != expected_canonical:
+            problems.append(
+                f"{relative} canonical must be {expected_canonical!r}; found {canonical!r}"
+            )
+
+    for relative in operational:
+        text = (root / relative).read_text(encoding="utf-8")
+        for retired_root in retired:
+            if retired_root in text:
+                problems.append(f"retired operational URL {retired_root!r} remains in {relative}")
+
+    return problems
+
+
+def main() -> int:
+    result = _identity_original_main()
+    if result not in (None, 0):
+        return int(result)
+    problems = _validate_current_github_identity()
+    if problems:
+        for problem in problems:
+            print(f"FAIL: {problem}")
+        return 1
+    print("PASS: current GitHub repository and Pages identity")
+    return 0
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -282,6 +282,14 @@ def convert(
                 ),
                 "hash_mode": hash_mode,
                 "replacements": replacements,
+                "classification": (
+                    "direct port" if not replacements else "native rewrite"
+                ),
+                "revision_summary": (
+                    f"Imported {target_relative} unchanged from the fixed baseline."
+                    if not replacements
+                    else f"Adapted {target_relative} for Codex-native paths, syntax, and project behavior."
+                ),
             }
         )
     return records
@@ -313,7 +321,7 @@ def main() -> int:
         )
     records = convert(source_root, refresh=args.refresh)
     manifest = {
-        "schema_version": 2,
+        "schema_version": 3,
         "source_repository": (
             "https://github.com/pedrohcgs/claude-code-my-workflow"
         ),

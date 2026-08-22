@@ -1,6 +1,6 @@
 # Stability matrix
 
-Current target: `1.2.1` stable.
+Current target: `1.2.2` stable.
 
 | Gate | Required result | Current result |
 | --- | --- | --- |

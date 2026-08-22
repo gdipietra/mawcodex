@@ -2,6 +2,18 @@
 
 All notable MAW Codex changes are documented here.
 
+## [1.2.2] - 2026-08-22
+
+### Changed
+
+- Migrated the canonical GitHub repository, Pages site, support links, and
+  plugin metadata from dipietra to gdipietra.
+- Strengthened public-site and release-evidence validation so a redirected Git
+  repository cannot mask dead Pages canonicals or stale source remotes.
+- Added explicit per-component classification and revision summaries to the
+  project-template provenance manifest.
+- Corrected the deep-audit hook test command to invoke the packaged unit tests.
+
 ## [1.2.1] - 2026-08-22
 
 ### Added

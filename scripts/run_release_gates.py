@@ -178,6 +178,17 @@ def main() -> int:
     try:
         require_pass("package validation", preliminary)
 
+        public_site = run(
+            [sys.executable, str(ROOT / "scripts" / "validate_public_site.py")],
+            environment=environment,
+        )
+        require_pass("public-site validation", public_site)
+        source_result["public_site_validation"] = {
+            "result": "PASS",
+            "command": "python scripts/validate_public_site.py",
+            "stdout": public_site.stdout.strip(),
+        }
+
         plugin = run(
             [sys.executable, str(plugin_validator), str(ROOT)],
             environment=environment,
@@ -272,6 +283,7 @@ def main() -> int:
             "path": str(source),
             "origin": source_result["origin"],
             "upstream": source_result["upstream"],
+            "public_site_validation": source_result["public_site_validation"],
         },
         "unit_tests": {
             "result": "PASS",

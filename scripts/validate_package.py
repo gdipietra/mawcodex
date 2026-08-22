@@ -1030,8 +1030,8 @@ def validate_project_template_manifest(
         )
         return
     problems: list[str] = []
-    if manifest.get("schema_version") != 2:
-        problems.append("schema_version must be 2")
+    if manifest.get("schema_version") != 3:
+        problems.append("schema_version must be 3")
     if manifest.get("source_commit") != BASELINE_COMMIT:
         problems.append("source commit differs from the fixed baseline")
     if manifest.get("generated_by") != "scripts/migrate_project_template.py":
@@ -1868,6 +1868,83 @@ def main() -> int:
         )
     return 1 if audit.failed else 0
 
+
+
+
+_migration_original_main = main
+
+
+def _normalize_git_url(value: object) -> str:
+    return str(value or "").strip().rstrip("/").removesuffix(".git")
+
+
+def _validate_migration_release_invariants() -> list[str]:
+    import json as _json
+    import sys as _sys
+
+    root = Path(__file__).resolve().parents[1]
+    problems: list[str] = []
+    project_manifest = _json.loads(
+        (root / "docs" / "conversion" / "PROJECT_TEMPLATE_MANIFEST.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if project_manifest.get("schema_version") != 3:
+        problems.append("project-template manifest schema_version must be 3")
+    allowed = {
+        "direct port",
+        "native rewrite",
+        "composed replacement",
+        "retained reference",
+        "unsupported",
+    }
+    for index, record in enumerate(project_manifest.get("files", [])):
+        if record.get("classification") not in allowed:
+            problems.append(f"project-template record {index} lacks a valid classification")
+        summary = record.get("revision_summary")
+        if not isinstance(summary, str) or not summary.strip():
+            problems.append(f"project-template record {index} lacks revision_summary")
+        replacements = record.get("replacements")
+        if not isinstance(replacements, list):
+            problems.append(f"project-template record {index} replacements must be a list")
+        elif record.get("classification") == "direct port" and replacements:
+            problems.append(f"project-template record {index} direct port has replacements")
+        elif record.get("classification") == "native rewrite" and not replacements:
+            problems.append(f"project-template record {index} native rewrite lacks replacements")
+
+    if "--release" in _sys.argv:
+        official = _json.loads(
+            (root / "docs" / "conversion" / "OFFICIAL_VALIDATION.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        source = official.get("source_contract")
+        if not isinstance(source, dict):
+            problems.append("official source_contract evidence is missing")
+        else:
+            expected_origin = "https://github.com/gdipietra/claude-code-my-workflow"
+            expected_upstream = "https://github.com/pedrohcgs/claude-code-my-workflow"
+            if _normalize_git_url(source.get("origin")) != expected_origin:
+                problems.append("official source_contract origin is not the gdipietra fork")
+            if _normalize_git_url(source.get("upstream")) != expected_upstream:
+                problems.append("official source_contract upstream is not Pedro's repository")
+            public_site = source.get("public_site_validation")
+            if not isinstance(public_site, dict) or public_site.get("result") != "PASS":
+                problems.append("official public-site evidence is missing or not PASS")
+    return problems
+
+
+def main() -> int:
+    result = _migration_original_main()
+    if result not in (None, 0):
+        return int(result)
+    problems = _validate_migration_release_invariants()
+    if problems:
+        for problem in problems:
+            print(f"FAIL: {problem}")
+        return 1
+    print("PASS: migration release invariants")
+    return 0
 
 if __name__ == "__main__":
     raise SystemExit(main())

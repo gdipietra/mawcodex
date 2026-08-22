@@ -1,13 +1,13 @@
 {
   "name": "mawcodex",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Codex-native academic workflows for research, writing, reproducibility, review, and teaching.",
   "author": {
     "name": "Giovanni Di Pietra",
-    "url": "https://github.com/dipietra"
+    "url": "https://github.com/gdipietra"
   },
-  "homepage": "https://dipietra.github.io/mawcodex/",
-  "repository": "https://github.com/dipietra/mawcodex",
+  "homepage": "https://gdipietra.github.io/mawcodex/",
+  "repository": "https://github.com/gdipietra/mawcodex",
   "license": "MIT",
   "keywords": [
     "academic-research",
@@ -33,9 +33,9 @@
       "Durable project personalization and instruction layers",
       "Auditable upstream adaptation"
     ],
-    "websiteURL": "https://dipietra.github.io/mawcodex/",
-    "privacyPolicyURL": "https://dipietra.github.io/mawcodex/privacy.html",
-    "termsOfServiceURL": "https://dipietra.github.io/mawcodex/terms.html",
+    "websiteURL": "https://gdipietra.github.io/mawcodex/",
+    "privacyPolicyURL": "https://gdipietra.github.io/mawcodex/privacy.html",
+    "termsOfServiceURL": "https://gdipietra.github.io/mawcodex/terms.html",
     "defaultPrompt": [
       "Assess this academic project before changing it.",
       "Run this research task with evidence and verification gates.",

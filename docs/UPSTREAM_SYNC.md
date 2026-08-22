@@ -4,7 +4,7 @@ The source fork lives at `C:\GitHub\claude-code-my-workflow`.
 
 ## Remote contract
 
-- `origin`: `https://github.com/dipietra/claude-code-my-workflow.git`
+- `origin`: `https://github.com/gdipietra/claude-code-my-workflow.git`
 - `upstream`: `https://github.com/pedrohcgs/claude-code-my-workflow.git`
 
 ## Review-first update procedure

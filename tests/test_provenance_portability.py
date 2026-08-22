@@ -38,7 +38,23 @@ class ProjectProvenancePortabilityTests(unittest.TestCase):
 
     def test_manifest_hashes_canonical_source_and_target_bytes(self) -> None:
         document = json.loads(MANIFEST.read_text(encoding="utf-8"))
-        self.assertEqual(document["schema_version"], 2)
+        self.assertEqual(document["schema_version"], 3)
+        for record in document["files"]:
+            self.assertIn(
+                record["classification"],
+                {
+                    "direct port",
+                    "native rewrite",
+                    "composed replacement",
+                    "retained reference",
+                    "unsupported",
+                },
+            )
+            self.assertTrue(record["revision_summary"].strip())
+            if record["replacements"]:
+                self.assertEqual(record["classification"], "native rewrite")
+            else:
+                self.assertEqual(record["classification"], "direct port")
         records = document["files"]
         self.assertEqual(len(records), 18)
         for record in records:

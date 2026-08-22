@@ -26,7 +26,7 @@ the per-component records; they are not substitutes for those records.
 
 ## Current stable baseline
 
-Version `1.2.1` records 58 validated packaged skills: the 52 semantically
+Version `1.2.2` records 58 validated packaged skills: the 52 semantically
 reviewed source-derived skills plus JAW, CAW, PAW, LAW, UAW, and SAW. It adds
 the native ManageRAW agent, deterministic project state, two initial
 forward-use-case profiles, and a public EN-US documentation surface while

@@ -48,6 +48,16 @@ one canonical `mawcodex` entry. When no catalog exists, it creates one
 displayed as **Personal**. It refuses an existing install unless `--update` is
 explicit; update mode makes timestamped backups.
 
+For an existing local-store installation, use the explicit update path:
+
+```powershell
+C:\Codex\mawcodex\scripts\maw.cmd install --apply --update
+```
+
+This repository release does not mutate the personal marketplace or Codex
+cache by itself. The installed version remains unchanged until that separately
+authorized update command is run.
+
 Restart Codex or begin a new task, open **Plugins**, select the local
 marketplace name shown in the app (for example **Personal** or an existing
 custom display name), and install or enable **MAW Codex**. Confirm that the 58

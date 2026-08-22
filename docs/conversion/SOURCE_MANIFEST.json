@@ -140,7 +140,7 @@
       "source": ".claude/skills/deep-audit/SKILL.md",
       "source_sha256": "6227f6bcd3691360b0822e38e9709ca65165c32a4a21576e47c04d3e401b7427",
       "target": "skills/deep-audit/SKILL.md",
-      "target_sha256": "1471a3ab925845aea367ba22e1d17c1f9fc17bec28c0c931bc44abb24697ae85",
+      "target_sha256": "38ed12e1ef2010e9dfd76b6807dd2d743b41873d3ea21efacab3d04cc5902a43",
       "status": "validated",
       "classification": "native rewrite",
       "revision_record": "docs/conversion/skills/deep-audit.md",

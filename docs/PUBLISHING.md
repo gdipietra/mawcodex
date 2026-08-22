@@ -2,8 +2,8 @@
 
 This repository is prepared for publication at:
 
-- source: `https://github.com/dipietra/mawcodex`
-- website: `https://dipietra.github.io/mawcodex/`
+- source: `https://github.com/gdipietra/mawcodex`
+- website: `https://gdipietra.github.io/mawcodex/`
 
 These are intended publisher-controlled endpoints. They are not evidence of a
 live release until the external steps below have completed and been verified.
@@ -25,17 +25,16 @@ UNVERIFIED.
 
 Each state-changing Git or GitHub action requires explicit authorization.
 
-1. Create the public `dipietra/mawcodex` repository with no generated starter
-   files.
-2. Add it as this checkout's `origin`, inspect the exact diff, and push the
-   reviewed `main` branch.
+1. Confirm that `origin` is exactly `https://github.com/gdipietra/mawcodex.git`
+   and inspect the reviewed `main` diff.
+2. Push the authorized `main` commit to the existing public repository.
 3. In GitHub **Settings > Pages**, choose **GitHub Actions** as the publishing
    source.
 4. Confirm that `stable-gates` passes on Linux and Windows.
 5. Confirm that `github-pages` deploys `docs/` and reports the expected URL.
 6. Inspect the homepage, capability filters, credits, support, privacy, terms,
    mobile layout, and all internal links on the live site.
-7. Create the signed or annotated `v1.2.1` tag and GitHub Release only after
+7. Create the signed or annotated `v1.2.2` tag and GitHub Release only after
    the remote evidence is clean.
 8. Treat any Codex marketplace submission as a separate publication action;
    verify publisher identity, listing metadata, and installation in a fresh
@@ -56,3 +55,10 @@ history or force-push as a routine rollback.
   external action succeeds.
 
 Never collapse these states into a single "published" claim.
+
+## Username migration rule
+
+Operational links, plugin metadata, and GitHub Pages canonicals use gdipietra.
+The retired dipietra namespace is retained only in dated provenance and audit
+records. A redirect from an old Git repository URL is not evidence that an old
+GitHub Pages URL remains available.

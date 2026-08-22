@@ -1,5 +1,7 @@
 # MAW Codex
 
+> **Canonical publication target:** https://gdipietra.github.io/mawcodex/ from https://github.com/gdipietra/mawcodex. Each release is considered deployed only after its authorized push and GitHub Pages workflow are verified.
+
 MAW Codex is a Codex-native academic-workflow package derived from
 [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow).
 It preserves the original plan-implement-verify discipline, adversarial review
@@ -8,7 +10,7 @@ rebuilding their execution surfaces for Codex.
 
 ## Current status
 
-Version `1.2.1` is the current stable package. Its local release evidence and
+Version `1.2.2` is the current stable package. Its local release evidence and
 the still-separate remote-publication boundary are documented explicitly. The
 verified inventory is:
 
@@ -25,11 +27,10 @@ The purple MAW icon, academic pet, and plugin thumbnail in `assets/brand/`
 form the package's original visual identity.
 
 The public website is prepared for
-[GitHub Pages](https://dipietra.github.io/mawcodex/). It gives Pedro H. C.
+[GitHub Pages](https://gdipietra.github.io/mawcodex/). It gives Pedro H. C.
 Sant'Anna prominent credit, separates the 52 source-derived workflows from
 MAW Codex's native control-plane work, and exposes a capability-by-capability
-translation ledger. Until the repository is pushed and Pages is enabled, the
-site URL is a publication target rather than evidence of a live deployment.
+The site URL is a publication target rather than evidence of a live deployment.
 
 The stable claim, local evidence, and environment-dependent limitations are
 recorded in `docs/conversion/STABILITY.md` and

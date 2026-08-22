@@ -1,6 +1,6 @@
 # Known limitations
 
-These limitations define the boundary of the `1.2.1` stability claim. None
+These limitations define the boundary of the `1.2.2` stability claim. None
 weakens the package's research-governance gates; each identifies behavior that
 depends on the host environment or an explicit user choice.
 
@@ -72,3 +72,21 @@ depends on the host environment or an explicit user choice.
 - Restricted-data clearance is institution-specific. The disclosure workflow
   helps identify and document risks; it does not replace an authorized
   disclosure officer or enclave review.
+
+## Deferred hardening after the username migration
+
+The 2026-08-22 deep audit identified three non-blocking hardening opportunities
+that are intentionally outside release `1.2.2`: make optional hook failures
+more observable, bound hook passport discovery, and add stronger source/target
+overlap rejection to migration helpers. They require separate behavioral tests
+and are not represented as resolved by the GitHub identity migration.
+
+GitHub Pages availability remains externally verified after each authorized
+push. Repository redirects from `dipietra` are compatibility behavior only; the
+retired Pages namespace is not a supported endpoint.
+### Local marketplace state after release 1.2.2
+
+Publishing the repository and GitHub Pages does not update the canonical
+personal-store copy or an existing Codex cache. Those external local surfaces
+may remain on `1.2.0` until a separately authorized installer update is run;
+release `1.2.2` does not claim otherwise.

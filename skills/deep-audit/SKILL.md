@@ -39,7 +39,7 @@ Run the repository's checked-in validation commands. For MAW Codex, start with:
 ```text
 python scripts/validate_package.py
 python scripts/run_skill_validators.py
-python scripts/test_hooks.py
+python -m unittest tests.test_hooks tests.test_hook_launcher
 python -m unittest discover -s tests
 ```
 

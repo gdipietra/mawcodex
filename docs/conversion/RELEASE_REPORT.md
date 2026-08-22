@@ -1,10 +1,10 @@
-# MAW Codex 1.2.1 release report
+# MAW Codex 1.2.2 release report
 
 Release date: 2026-08-22
 
 ## Outcome
 
-MAW Codex `1.2.1` satisfies its local stable-package contract. The package
+MAW Codex `1.2.2` satisfies its local stable-package contract. The package
 preserves the fixed upstream academic workflow's intent while replacing its
 provider-specific runtime surfaces with Codex-native skills, project agents,
 portable roles, opt-in hooks, and explicit verification boundaries.
@@ -78,7 +78,14 @@ or institutional disclosure operations have run in every future project.
 Those checks remain `UNVERIFIED` until the required runtime, source, or human
 authority is available.
 
-The repository has no configured remote in this local release state. The
-GitHub Pages and stable-gates workflows therefore have not run remotely, and
-no live-site, remote-CI, GitHub Release, or marketplace-publication result is
-claimed by this report.
+The canonical remote is `https://github.com/gdipietra/mawcodex.git`. Local
+release gates do not establish remote deployment: the pushed commit and its
+`stable-gates` and `github-pages` runs require separate post-push verification.
+No GitHub Release or marketplace-publication result is claimed by this report.
+
+## GitHub username migration (2026-08-22)
+
+Release `1.2.2` changes the operational repository and Pages identity to
+`gdipietra`. The release gates bind current source evidence to the new fork and
+Pedro H. C. Sant'Anna's upstream. Live deployment is a separate post-push gate;
+a successful local release snapshot does not by itself prove Pages availability.
