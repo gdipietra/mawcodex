@@ -18,6 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       MAWCODEX_SOURCE_CLONE: ${{ github.workspace }}/.source-baseline
+      CODEX_SKILL_VALIDATOR: ${{ runner.temp }}/mawcodex-quick_validate.py
     steps:
       - uses: actions/checkout@v7
         with:
@@ -35,15 +36,20 @@ jobs:
         run: |
           git remote add upstream https://github.com/pedrohcgs/claude-code-my-workflow.git
           git fetch upstream main --no-tags
+          git fetch origin tag v2.1.0
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Provision official Codex skill validator
+        run: |
+          python -m pip install --disable-pip-version-check --no-input PyYAML==6.0.3
+          python scripts/provision_codex_skill_validator.py
       - name: Verify source clone contract
         run: python scripts/check_source_clone.py .source-baseline
       - name: Validate portable stable evidence
         run: python scripts/validate_package.py --release
       - name: Run packaged skill validators
-        run: python scripts/run_skill_validators.py
+        run: python scripts/run_skill_validators.py --validator "${{ env.CODEX_SKILL_VALIDATOR }}"
 
       - name: Validate public site identity
         run: python scripts/validate_public_site.py

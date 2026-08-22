@@ -13,6 +13,7 @@ All notable MAW Codex changes are documented here.
 - Added explicit per-component classification and revision summaries to the
   project-template provenance manifest.
 - Corrected the deep-audit hook test command to invoke the packaged unit tests.
+- Pinned and hash-verifies the official OpenAI Codex skill validator for portable CI.
 
 ## [1.2.1] - 2026-08-22
 

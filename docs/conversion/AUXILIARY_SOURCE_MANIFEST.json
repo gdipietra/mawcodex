@@ -141,7 +141,7 @@
       "targets": [
         {
           "path": ".github/workflows/gates.yml",
-          "sha256": "9e2a0f06399f29def30fbdabf60b9fe5ba37bac89f77eabab5ebc660c86012d4"
+          "sha256": "aa851792e81420569820d7e3954091d01aa1c3d59a1b99a5211c06403998b850"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -193,7 +193,7 @@
       "targets": [
         {
           "path": "CHANGELOG.md",
-          "sha256": "8c2391d0f5aa95f013c3c59a3f9a7861fd24dd4d508bb2cf0c55e7f9d188461c"
+          "sha256": "b758619caedc3c8b15022dfcd6feeb1adcaa7cb466115ba8738779dc730b82b7"
         },
         {
           "path": "NOTICE.md",
