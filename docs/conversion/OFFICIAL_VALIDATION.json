@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "package_version": "1.2.2",
-  "generated_at": "2026-08-22T22:31:55.082759+00:00",
+  "generated_at": "2026-08-22T22:38:34.274032+00:00",
   "plugin_validator": {
     "result": "PASS",
     "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\plugin-creator\\scripts\\validate_plugin.py",
@@ -33,7 +33,7 @@
   },
   "release_snapshot": {
     "algorithm": "sha256",
-    "digest": "71a1a8f63ecd5564d37edcf4be450689c2411494d472e88d98802313ba384fde",
+    "digest": "7b2fef44baf138e17d3b5960713915d0b6b1c2a48dfa7d761e11f7353079daf0",
     "file_count": 438
   }
 }
