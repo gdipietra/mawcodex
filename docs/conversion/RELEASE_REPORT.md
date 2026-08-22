@@ -1,13 +1,20 @@
-# MAW Codex 1.2.0 release report
+# MAW Codex 1.2.1 release report
 
-Release date: 2026-07-28
+Release date: 2026-08-22
 
 ## Outcome
 
-MAW Codex `1.2.0` satisfies its local stable-package contract. The package
+MAW Codex `1.2.1` satisfies its local stable-package contract. The package
 preserves the fixed upstream academic workflow's intent while replacing its
 provider-specific runtime surfaces with Codex-native skills, project agents,
 portable roles, opt-in hooks, and explicit verification boundaries.
+
+This patch release adds a public EN-US documentation surface and publication
+metadata without changing the fixed source boundary. The website gives Pedro
+H. C. Sant'Anna direct original-work credit, provides a capability-level map
+of the 52 adapted workflows, and documents the six native management skills
+plus ManageRAW separately. It also records the portable Lato/Helvetica
+fallback added to the shared XeLaTeX preamble.
 
 ## Inventory and semantic review
 
@@ -71,5 +78,7 @@ or institutional disclosure operations have run in every future project.
 Those checks remain `UNVERIFIED` until the required runtime, source, or human
 authority is available.
 
-The repository has not yet been published independently, so the bundled
-GitHub Actions workflow has not run remotely. No remote CI result is claimed.
+The repository has no configured remote in this local release state. The
+GitHub Pages and stable-gates workflows therefore have not run remotely, and
+no live-site, remote-CI, GitHub Release, or marketplace-publication result is
+claimed by this report.

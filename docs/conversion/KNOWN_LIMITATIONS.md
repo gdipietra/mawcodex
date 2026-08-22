@@ -1,6 +1,6 @@
 # Known limitations
 
-These limitations define the boundary of the `1.2.0` stability claim. None
+These limitations define the boundary of the `1.2.1` stability claim. None
 weakens the package's research-governance gates; each identifies behavior that
 depends on the host environment or an explicit user choice.
 
@@ -60,6 +60,9 @@ depends on the host environment or an explicit user choice.
 - Structural, provenance, hook, initializer, and representative workflow
   checks are local release gates. The included GitHub Actions workflow has not
   run remotely until this independent repository is published to GitHub.
+- The GitHub Pages URL in public metadata is the intended publisher-controlled
+  endpoint. It is not verified live until the repository exists at the stated
+  URL, Pages uses GitHub Actions as its source, and the deployment completes.
 - Representative forward tests exercise high-risk decisions and failure
   semantics. They do not substitute for compiling every possible manuscript,
   running every supported statistical package, or validating every

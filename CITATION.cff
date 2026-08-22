@@ -6,8 +6,8 @@ authors:
   - family-names: "Di Pietra"
     given-names: "Giovanni"
 license: MIT
-version: 1.2.0
-date-released: 2026-07-28
+version: 1.2.1
+date-released: 2026-08-22
 keywords:
   - codex
   - academic-research

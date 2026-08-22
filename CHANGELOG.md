@@ -2,6 +2,28 @@
 
 All notable MAW Codex changes are documented here.
 
+## [1.2.1] - 2026-08-22
+
+### Added
+
+- A public EN-US website for GitHub Pages with prominent original-work credit,
+  a source-to-Codex translation map, a searchable 58-skill capability ledger,
+  detailed ManageRAW/JAW/CAW/PAW/LAW/UAW/SAW explanations, and public support,
+  privacy, terms, and credits pages.
+- A GitHub Pages workflow that publishes only the static `docs/` site through
+  GitHub's supported Pages artifact and OIDC deployment actions.
+- Public-release instructions that keep local preparation separate from
+  commit, push, tag, release, Pages activation, and marketplace submission.
+
+### Changed
+
+- Added publisher-controlled website, repository, privacy, and terms metadata
+  to the plugin manifest.
+- Made the shared XeLaTeX preamble tolerant of missing Lato and Helvetica font
+  families by selecting an installed fallback instead of failing immediately.
+- Expanded attribution language so the 52 source-derived capabilities and the
+  Codex-native control plane are visibly distinct.
+
 ## [1.2.0] - 2026-07-28
 
 ### Added

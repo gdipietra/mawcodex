@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the MAW Codex static site and local plugin.">
+  <meta name="theme-color" content="#23072e">
+  <link rel="canonical" href="https://dipietra.github.io/mawcodex/privacy.html">
+  <link rel="icon" href="assets/brand/maw-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Privacy - MAW Codex</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html"><img src="assets/brand/maw-icon.png" alt=""><span>MAW Codex</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="capabilities.html">Capabilities</a><a href="credits.html">Credits</a><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></div>
+  </nav></header>
+  <main id="main" class="shell legal">
+    <header class="page-hero">
+      <p class="eyebrow">Public policy</p>
+      <h1>Privacy</h1>
+      <p class="lede">Effective August 22, 2026. MAW Codex is a local workflow package, not a hosted research service.</p>
+    </header>
+    <p class="notice">This page describes the code published in this repository. It does not replace the privacy policies of GitHub, OpenAI, Codex connectors, or any external service a user independently chooses.</p>
+
+    <h2>The website</h2>
+    <p>The MAW Codex website is a static GitHub Pages site. The repository includes no analytics script, advertising tracker, account system, form processor, application backend, or first-party cookie.</p>
+    <p>GitHub hosts the site and may process network and access information under its own policies. Consult <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a> for hosting-related processing.</p>
+
+    <h2>The plugin</h2>
+    <p>MAW Codex runs inside the user's Codex environment and does not operate a publisher-hosted backend. The plugin does not independently collect, sell, or transmit research data, prompts, files, credentials, student information, or usage telemetry to Giovanni Di Pietra.</p>
+    <p>Some skills can use web access, email, calendar, Drive, GitHub, a browser, or other connectors when those capabilities are available in the active Codex session and the requested workflow requires them. Those actions are governed by the user's authorization, Codex policy, and the external service's terms. MAW Codex requires unavailable operations to remain UNVERIFIED and keeps state-changing external actions behind explicit gates.</p>
+
+    <h2>Local state</h2>
+    <p>Initialized projects may store tracked shared settings in <code>.maw/profile.yaml</code>, ignored personal or machine settings in <code>.maw/local.yaml</code>, and task evidence in project-local quality reports. The repository's templates exclude secrets, private transcript internals, and raw or restricted data from reusable exports.</p>
+
+    <h2>Support communications</h2>
+    <p>If you open a GitHub issue or security advisory, GitHub processes the information you submit. Do not include confidential data, credentials, student records, unpublished restricted material, or exploitable security details in a public issue.</p>
+
+    <h2>Changes</h2>
+    <p>Material policy changes will be versioned in this repository. The effective date above identifies this published text.</p>
+
+    <h2>Contact</h2>
+    <p>Use the <a href="support.html">support routes</a>. Security-sensitive reports should use a private GitHub security advisory when that feature is available.</p>
+  </main>
+  <footer class="site-footer"><div class="shell"><div class="footer-grid">
+    <div><h2>MAW Codex</h2><p>Local-first academic workflow infrastructure.</p></div>
+    <div class="footer-links"><strong>Project</strong><a href="index.html">Home</a><a href="capabilities.html">Capabilities</a><a href="credits.html">Credits</a></div>
+    <div class="footer-links"><strong>Policies</strong><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  </div><p class="footer-small">MIT licensed. No first-party analytics or hosted plugin backend.</p></div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

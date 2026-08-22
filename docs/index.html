@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MAW Codex translates Pedro H. C. Sant'Anna's academic workflow to Codex and adds a verification-gated project control plane.">
+  <meta name="theme-color" content="#23072e">
+  <meta property="og:title" content="MAW Codex - academic work, with gates">
+  <meta property="og:description" content="58 academic workflow skills, explicit provenance, and Codex-native project management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dipietra.github.io/mawcodex/">
+  <meta property="og:image" content="https://dipietra.github.io/mawcodex/assets/brand/maw-icon.png">
+  <link rel="canonical" href="https://dipietra.github.io/mawcodex/">
+  <link rel="icon" href="assets/brand/maw-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>MAW Codex - Academic work, with gates</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-current="page">
+        <img src="assets/brand/maw-icon.png" alt="">
+        <span>MAW Codex</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#origin">Origin</a>
+        <a href="#translation">Translation</a>
+        <a href="#control-plane">MAW layer</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="credits.html">Credits</a>
+        <a href="support.html">Support</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="shell hero">
+      <div>
+        <p class="eyebrow">Verification-gated academic workflows for Codex</p>
+        <h1>Academic work, <span>with gates.</span></h1>
+        <p class="lede">
+          MAW Codex translates Pedro H. C. Sant'Anna's academic workflow into
+          Codex-native skills, roles, instructions, hooks, and evidence
+          contracts, then adds a control plane for safely fitting those
+          capabilities into real research and teaching projects.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="capabilities.html">Explore all 58 skills</a>
+          <a class="button secondary" href="https://github.com/dipietra/mawcodex">View source</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-label="MAW Codex visual mark">
+        <img src="assets/brand/maw-icon.png" alt="Purple one-eyed MAW Codex mascot">
+        <div class="hero-note">Evidence before confidence.<br>Authority before action.<br>Unknown stays UNVERIFIED.</div>
+      </div>
+    </section>
+
+    <div class="shell stat-strip reveal" aria-label="Release inventory">
+      <div class="stat"><strong>52</strong><span>source-derived skills</span></div>
+      <div class="stat"><strong>6</strong><span>native management skills</span></div>
+      <div class="stat"><strong>19</strong><span>portable role pairs</span></div>
+      <div class="stat"><strong>211</strong><span>upstream files dispositioned</span></div>
+    </div>
+
+    <section class="shell section" id="origin">
+      <p class="section-kicker">Origin and authorship</p>
+      <h2>Credit is part of the architecture.</h2>
+      <p class="section-lede">
+        MAW Codex is not presented as an independent invention of the academic
+        workflow it carries. Its source boundary, adaptation work, and native
+        additions are deliberately separated.
+      </p>
+      <div class="origin-grid">
+        <article class="card source reveal">
+          <span class="card-label">Original work</span>
+          <h3>Pedro H. C. Sant'Anna</h3>
+          <p>
+            <a href="https://github.com/pedrohcgs/claude-code-my-workflow">claude-code-my-workflow</a>
+            supplies the substantive academic workflow lineage: plan,
+            implement, verify, adversarial review, reproducibility, research
+            safeguards, and teaching workflows.
+          </p>
+          <p>
+            MAW Codex is fixed to upstream release <strong>v2.1.0</strong>,
+            commit <code>be53c12f235996dff41fb7f21580506fd2dd8d50</code>,
+            under the MIT License.
+          </p>
+        </article>
+        <article class="card native reveal">
+          <span class="card-label">Codex adaptation and extensions</span>
+          <h3>Giovanni Di Pietra</h3>
+          <p>
+            The adaptation rebuilds provider-specific surfaces for Codex,
+            records source and target hashes, adds deterministic release gates,
+            and creates ManageRAW plus JAW, CAW, PAW, LAW, UAW, and SAW.
+          </p>
+          <p>
+            This work preserves upstream credit and does not imply Pedro's
+            endorsement of the adaptation or its native additions.
+          </p>
+        </article>
+      </div>
+      <p class="credit-line reveal">
+        The short version: Pedro designed the original academic workflow.
+        Giovanni translated it for Codex, made the conversion auditable, and
+        added the multi-project control plane.
+      </p>
+      <p>
+        See the <a href="credits.html">full credits and third-party lineage</a>,
+        <a href="https://github.com/dipietra/mawcodex/blob/main/NOTICE.md">NOTICE</a>,
+        and <a href="https://github.com/dipietra/mawcodex/blob/main/THIRD_PARTY_NOTICES.md">third-party notices</a>.
+      </p>
+    </section>
+
+    <section class="section alt" id="translation">
+      <div class="shell">
+        <p class="section-kicker">Platform translation</p>
+        <h2>Preserved intent. Rebuilt execution.</h2>
+        <p class="section-lede">
+          Mechanical renaming was only the baseline. Every provider surface
+          received a documented Codex disposition, including intentional
+          behavior loss where the original depended on unsafe permissions or
+          private runtime internals.
+        </p>
+        <table class="translation-table reveal">
+          <thead>
+            <tr>
+              <th>Original surface</th>
+              <th>MAW Codex surface</th>
+              <th>What materially changed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Original">52 Claude skills</td>
+              <td data-label="Codex target">52 packaged Codex skills</td>
+              <td data-label="Material change">Trigger-focused frontmatter, local artifacts, current tools/connectors, explicit authority, and PASS/FAIL/UNVERIFIED output contracts.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">18 Claude agents</td>
+              <td data-label="Codex target">18 custom-agent TOMLs plus 18 portable role files</td>
+              <td data-label="Material change">Read-only reviewers are sandboxed from fixers; bounded subagents replace provider-specific orchestration.</td>
+            </tr>
+            <tr>
+              <td data-label="Original"><code>CLAUDE.md</code></td>
+              <td data-label="Codex target">Package and project <code>AGENTS.md</code></td>
+              <td data-label="Material change">Authority is hierarchical and scoped so package-maintenance rules do not leak into initialized projects.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">Provider settings and permission bypass</td>
+              <td data-label="Codex target">Safe project config, sandbox policy, and explicit action gates</td>
+              <td data-label="Material change">Broad allowlists and bypass permissions are intentionally omitted. User and session policy remain authoritative.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">Global output styles</td>
+              <td data-label="Codex target">Scoped writing/review skills and portable roles</td>
+              <td data-label="Material change">Style behavior loads only when relevant instead of silently changing every response.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">7 lifecycle hook intents</td>
+              <td data-label="Codex target">4 opt-in hooks plus 3 explicit native replacements</td>
+              <td data-label="Material change">Hooks are defense-in-depth, run only after trust, fail visibly and safely, and never claim complete enforcement.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">Private status-line parsing</td>
+              <td data-label="Codex target">Visible UI, <code>$context-status</code>, checkpoints, and compaction state</td>
+              <td data-label="Material change">No private transcript parsing, provider model aliases, or undocumented token estimates.</td>
+            </tr>
+            <tr>
+              <td data-label="Original">Claude-oriented starter project</td>
+              <td data-label="Codex target">Transactional academic initializer</td>
+              <td data-label="Material change">Collision preflight, no overwrite, immutable raw-data roles, protected-material boundaries, and opt-in Git initialization.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="muted">
+          Exact source paths, hashes, classifications, target hashes, revisions,
+          and known loss are retained in the
+          <a href="https://github.com/dipietra/mawcodex/tree/main/docs/conversion">conversion record</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="shell section" id="control-plane">
+      <p class="section-kicker">Original MAW Codex contribution</p>
+      <h2>The workflow gained a project control plane.</h2>
+      <p class="section-lede">
+        Pedro's source supplies the academic execution system. MAW Codex adds a
+        separate management layer for adoption, ownership, personalization,
+        instruction hierarchy, updates, and sanitized learning across ongoing
+        projects.
+      </p>
+      <div class="management-grid">
+        <article class="card reveal">
+          <span class="card-label">Native agent</span>
+          <h3>ManageRAW</h3>
+          <p>
+            Coordinates the management layer without absorbing its component
+            skills. It routes work among JAW, CAW, PAW, LAW, UAW, and SAW and
+            records shared decisions in the MAW project profile.
+          </p>
+          <p class="boundary"><strong>Boundary:</strong> it cannot alter global instructions, merge same-named skills, infer another plugin's private behavior, or authorize external actions.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">JAW - Join</span>
+          <h3>Assess before adoption.</h3>
+          <p>Maps project history, source authority, protected material, dependencies, collisions, and rollback before any MAW state is written.</p>
+          <p class="boundary"><strong>Boundary:</strong> assessment-only is the default; environment changes and integration require separate approval.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">CAW - Coordinate</span>
+          <h3>Make ownership explicit.</h3>
+          <p>Assigns each step to MAW, project-local instructions, a specialist plugin, or a connector without inventing global precedence.</p>
+          <p class="boundary"><strong>Boundary:</strong> unavailable capabilities and unresolved material choices remain UNVERIFIED or return to the user.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">PAW - Personalize</span>
+          <h3>Separate shared from personal.</h3>
+          <p>Maintains tracked team choices in <code>.maw/profile.yaml</code> and non-weakening machine choices in ignored <code>.maw/local.yaml</code>.</p>
+          <p class="boundary"><strong>Boundary:</strong> it does not infer source authority, data sensitivity, build order, or publication rights.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">LAW - Layer</span>
+          <h3>Build the instruction graph.</h3>
+          <p>Designs root and nested <code>AGENTS.md</code>, supported project configuration, and effective precedence for concrete target paths.</p>
+          <p class="boundary"><strong>Boundary:</strong> inaccessible global or project instructions make precedence UNVERIFIED, never assumed.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">UAW - Update</span>
+          <h3>Reconcile, do not overwrite.</h3>
+          <p>Compares the old MAW base, project overlay, and candidate base so updates preserve project decisions and external ownership.</p>
+          <p class="boundary"><strong>Boundary:</strong> explicit-only; discovery, plan, apply, install, and external actions are separate gates.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-label">SAW - Slice</span>
+          <h3>Learn without leaking.</h3>
+          <p>Creates evidence-bounded project-return or generalized upstream-learning slices from recorded state.</p>
+          <p class="boundary"><strong>Boundary:</strong> secrets, data, students, unpublished content, code bodies, absolute paths, and external-plugin settings are excluded.</p>
+        </article>
+      </div>
+      <div class="hero-actions">
+        <a class="button" href="capabilities.html?filter=native">Inspect the native skills</a>
+        <a class="button secondary" href="https://github.com/dipietra/mawcodex/tree/main/docs/conversion">Read the design records</a>
+      </div>
+    </section>
+
+    <section class="section alt" id="safeguards">
+      <div class="shell">
+        <p class="section-kicker">Academic safeguards</p>
+        <h2>Unknown is a state, not an inconvenience.</h2>
+        <p class="section-lede">
+          Scientific validity, reproducibility, confidentiality, and
+          provenance outrank speed. Missing tools, inaccessible sources,
+          skipped renders, and unexecuted analyses remain UNVERIFIED.
+        </p>
+        <div class="policy-grid">
+          <article class="card reveal">
+            <h3>Evidence vocabulary</h3>
+            <p><strong>PASS</strong> requires observed evidence. <strong>FAIL</strong> identifies a violated gate. <strong>UNVERIFIED</strong> preserves a missing runtime, source, permission, or human decision without laundering it into confidence.</p>
+          </article>
+          <article class="card reveal">
+            <h3>External-action boundary</h3>
+            <p>Commit, push, deployment, submission, email, upload, sharing, synchronization, and deletion are separate actions. A workflow name never silently authorizes them.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Protected material</h3>
+            <p>Raw and restricted data remain immutable or controlled. Outputs face disclosure checks. Answer keys, student data, unpublished work, and credentials are never promoted into public artifacts by default.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Auditable conversion</h3>
+            <p>Every migrated component has a fixed source path and hash, a conversion classification, a revision record, structural validation, and forward testing when behavior is complex or high risk.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section" id="release">
+      <p class="section-kicker">Release 1.2.1</p>
+      <h2>Local readiness and publication are different claims.</h2>
+      <p class="section-lede">
+        The package can be locally release-ready before GitHub exists. Remote CI,
+        a live Pages deployment, a GitHub Release, and a marketplace listing
+        each need their own observed evidence.
+      </p>
+      <div class="release-rail reveal">
+        <div class="release-step">
+          <strong>1. Validate</strong>
+          Run the fixed-source contract, official plugin and skill validators,
+          hooks, unit tests, provenance, and stable evidence.
+        </div>
+        <div class="release-step">
+          <strong>2. Publish with authority</strong>
+          Create the repository, review the exact Git actions, enable Pages via
+          GitHub Actions, and wait for both workflows.
+        </div>
+        <div class="release-step">
+          <strong>3. Inspect live</strong>
+          Verify the URL, links, responsive layout, credits, legal pages,
+          install path, and release artifacts before saying “published.”
+        </div>
+      </div>
+      <pre class="code-block" aria-label="Local validation and installation commands"><code>git clone https://github.com/dipietra/mawcodex.git
+cd mawcodex
+.\scripts\maw.cmd all
+.\scripts\maw.cmd install
+.\scripts\maw.cmd install --apply</code></pre>
+      <div class="hero-actions">
+        <a class="button" href="https://github.com/dipietra/mawcodex/blob/main/docs/PUBLISHING.md">Publication checklist</a>
+        <a class="button secondary" href="https://github.com/dipietra/mawcodex/blob/main/docs/INSTALL.md">Installation guide</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div>
+          <h2>MAW Codex</h2>
+          <p>Codex-native academic workflows with explicit evidence, authority, and provenance.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Project</strong>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="credits.html">Credits</a>
+          <a href="https://github.com/dipietra/mawcodex">Source</a>
+        </div>
+        <div class="footer-links">
+          <strong>Policies</strong>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+      <p class="footer-small">
+        MIT licensed. Original workflow © 2026 Pedro H. C. Sant'Anna.
+        MAW Codex adaptation and native additions © 2026 Giovanni Di Pietra.
+        <span data-year>2026</span>.
+      </p>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

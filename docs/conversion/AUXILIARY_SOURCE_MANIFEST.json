@@ -193,11 +193,11 @@
       "targets": [
         {
           "path": "CHANGELOG.md",
-          "sha256": "cb3db359a25ccad2743e3e0af96b3e56944e748a7d276de4032e172f8c8417e1"
+          "sha256": "35afa19adc9dfa48b81bbdece3a0a2bdecaf3ff6b188180a28d55de2fb2339ff"
         },
         {
           "path": "NOTICE.md",
-          "sha256": "f7184e2ff6eccaeafdd8a9f1d54bebcf11056f8d1bc8fb394247bdf8515c73ed"
+          "sha256": "ec31f697a8fed4101bec8b4eff7a0fc3922ec089cc03434c42d673b92cbae072"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -213,7 +213,7 @@
       "targets": [
         {
           "path": "CITATION.cff",
-          "sha256": "9afdb4aa1ed691d09878ad6f0010164f68b6ed06ab34044f5d2697d576a95310"
+          "sha256": "027a1d3f77f661929186cab79ce8022a79d0c2255931cc10603598e0a4b9352c"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -293,7 +293,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -333,7 +333,7 @@
         },
         {
           "path": "docs/conversion/KNOWN_LIMITATIONS.md",
-          "sha256": "6e5571c28904e5b5859e55f7624c2a2a31e1b3a6db4b146880d87403af7dd568"
+          "sha256": "4a912bf76b0f6e05ee2fb4ee3898a51a91a39ab72c517dc2d1afbaca2e65cf5a"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -349,7 +349,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -357,7 +357,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -373,7 +373,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -381,7 +381,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -413,7 +413,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -421,7 +421,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -437,7 +437,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -445,7 +445,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -461,7 +461,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -469,7 +469,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -485,7 +485,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -493,7 +493,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -509,7 +509,7 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "b46bfcf49c6d10f51543dd6cb9210905afc0b10432c01a41bc65e2af2c2bcaf5"
+          "sha256": "6fce34ea2ac4d269b481a8a9358019865be526a8057be29953060fc25da2ea8f"
         },
         {
           "path": "docs/INSTALL.md",
@@ -517,7 +517,7 @@
         },
         {
           "path": "docs/conversion/README.md",
-          "sha256": "2394f9cd4b90bf4c8306abf53dc9db097b6f27366e9b6730fa2b2c7b30bd91c5"
+          "sha256": "dd7c89de041a816c42128d30eb41f15cdb1bb34faa9609cc5b59acb1ccf26f57"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -729,7 +729,7 @@
         },
         {
           "path": "scripts/validate_package.py",
-          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+          "sha256": "2bca44aa8a4926f8db911bcbc1bca0eff32ccbe70b4d57fb06e873d23e4b0fa7"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -765,7 +765,7 @@
         },
         {
           "path": "scripts/validate_package.py",
-          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+          "sha256": "2bca44aa8a4926f8db911bcbc1bca0eff32ccbe70b4d57fb06e873d23e4b0fa7"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -781,7 +781,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+          "sha256": "2bca44aa8a4926f8db911bcbc1bca0eff32ccbe70b4d57fb06e873d23e4b0fa7"
         },
         {
           "path": "scripts/refresh_source_manifest.py",
@@ -801,7 +801,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+          "sha256": "2bca44aa8a4926f8db911bcbc1bca0eff32ccbe70b4d57fb06e873d23e4b0fa7"
         },
         {
           "path": "scripts/refresh_source_manifest.py",
@@ -869,7 +869,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "d8200ffacc95c083fbfc0adaf8cd4689fbf30b5f97871aede0b98d46c7779813"
+          "sha256": "2bca44aa8a4926f8db911bcbc1bca0eff32ccbe70b4d57fb06e873d23e4b0fa7"
         },
         {
           "path": "scripts/check_source_clone.py",

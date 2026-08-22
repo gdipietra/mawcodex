@@ -16,7 +16,7 @@
       "source": "Preambles/header.tex",
       "source_sha256": "999fc2107e4fd289443f73e8bc915e5463c14bb2a3eeb7df2b8920530ea6c52e",
       "target": "assets/project-template/Preambles/header.tex",
-      "target_sha256": "21be7624abb8f5589870e4104a76f73953c427fea351831dc124d30528169716",
+      "target_sha256": "f794077420c49f1ca03461031fa5a593b68c8c82618b64e7610e02fe72b0504a",
       "hash_mode": "utf-8-lf",
       "replacements": [
         {
@@ -28,6 +28,12 @@
           "from": "scripts/check-palette-sync.sh",
           "to": "scripts/check-palette-sync.py",
           "count": 2
+        },
+        {
+          "operation": "insert-xetex-font-fallback",
+          "from": "pdfTeX inputenc engine guard",
+          "to": "guarded fontspec Lato/Helvetica/Arial fallback",
+          "count": 1
         }
       ]
     },

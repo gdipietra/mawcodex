@@ -133,15 +133,28 @@ def main() -> int:
     environment = os.environ.copy()
     environment["PYTHONUTF8"] = "1"
     environment["MAWCODEX_SOURCE_CLONE"] = str(source)
-    bundled_yaml = Path(os.environ.get("TEMP", "")) / (
-        "mawcodex-validation-deps"
+    default_validation_deps = (
+        Path(os.environ.get("TEMP", "")) / "mawcodex-validation-deps"
     )
-    if bundled_yaml.is_dir():
+    validation_deps = Path(
+        os.environ.get(
+            "MAWCODEX_VALIDATION_DEPS",
+            str(default_validation_deps),
+        )
+    )
+    yaml_init = validation_deps / "yaml" / "__init__.py"
+    if yaml_init.is_file():
         old_python_path = environment.get("PYTHONPATH")
         environment["PYTHONPATH"] = (
-            str(bundled_yaml)
+            str(validation_deps)
             if not old_python_path
-            else os.pathsep.join((str(bundled_yaml), old_python_path))
+            else os.pathsep.join((str(validation_deps), old_python_path))
+        )
+    elif validation_deps.is_dir():
+        print(
+            "WARN  ignoring incomplete validation dependency directory: "
+            f"{validation_deps}",
+            file=sys.stderr,
         )
 
     try:

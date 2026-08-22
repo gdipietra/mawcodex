@@ -26,10 +26,11 @@ the per-component records; they are not substitutes for those records.
 
 ## Current stable baseline
 
-Version `1.2.0` records 58 validated packaged skills: the 52 semantically
+Version `1.2.1` records 58 validated packaged skills: the 52 semantically
 reviewed source-derived skills plus JAW, CAW, PAW, LAW, UAW, and SAW. It adds
-the native ManageRAW agent, deterministic project state, and two initial
-forward-use-case profiles while retaining the existing evidence gates.
+the native ManageRAW agent, deterministic project state, two initial
+forward-use-case profiles, and a public EN-US documentation surface while
+retaining the existing evidence gates and fixed upstream boundary.
 
 The baseline also records all 13 provider runtime surfaces outside the core
 skill/agent/rule/reference/template inventory. The auxiliary coverage ledger

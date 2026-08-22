@@ -1,10 +1,13 @@
 {
   "name": "mawcodex",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Codex-native academic workflows for research, writing, reproducibility, review, and teaching.",
   "author": {
-    "name": "Giovanni Di Pietra"
+    "name": "Giovanni Di Pietra",
+    "url": "https://github.com/dipietra"
   },
+  "homepage": "https://dipietra.github.io/mawcodex/",
+  "repository": "https://github.com/dipietra/mawcodex",
   "license": "MIT",
   "keywords": [
     "academic-research",
@@ -21,16 +24,22 @@
     "developerName": "Giovanni Di Pietra",
     "category": "Education",
     "capabilities": [
-      "Academic research planning",
-      "Reproducible empirical workflows",
-      "Manuscript and slide review",
-      "Research governance",
-      "Ongoing-project deployment readiness",
-      "Cross-project workflow management"
+      "Research design and source-grounded synthesis",
+      "Reproducible empirical and replication workflows",
+      "Manuscript, code, and slide review",
+      "Teaching-material production and QA",
+      "Research governance and disclosure control",
+      "Project onboarding and capability routing",
+      "Durable project personalization and instruction layers",
+      "Auditable upstream adaptation"
     ],
+    "websiteURL": "https://dipietra.github.io/mawcodex/",
+    "privacyPolicyURL": "https://dipietra.github.io/mawcodex/privacy.html",
+    "termsOfServiceURL": "https://dipietra.github.io/mawcodex/terms.html",
     "defaultPrompt": [
-      "Run this academic task with explicit evidence and verification.",
-      "Ask ManageRAW to inspect this project's MAW configuration and route the next management action."
+      "Assess this academic project before changing it.",
+      "Run this research task with evidence and verification gates.",
+      "Ask ManageRAW to route the next project-management action."
     ],
     "brandColor": "#9B4AC3",
     "composerIcon": "./assets/brand/maw-icon.png",

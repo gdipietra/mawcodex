@@ -1,6 +1,6 @@
 # Stability matrix
 
-Current target: `1.2.0` stable.
+Current target: `1.2.1` stable.
 
 | Gate | Required result | Current result |
 | --- | --- | --- |
@@ -20,6 +20,7 @@ Current target: `1.2.0` stable.
 | Deterministic unit tests | all local tests PASS | PASS |
 | Official Codex validators | plugin and 58 skills PASS | PASS |
 | Known limitations | documented, no blockers | PASS |
+| Public-site structure | static site, legal pages, and Pages workflow present | PASS |
 
 The evidence behind this matrix is in `OFFICIAL_VALIDATION.json`,
 `FORWARD_TEST_RESULTS.json`, and `RELEASE_REPORT.md`. The stable claim covers

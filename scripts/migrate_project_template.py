@@ -98,6 +98,52 @@ TEXT_REPLACEMENTS = (
     ("inside Claude Code", "with Codex"),
 )
 
+XETEX_FONT_ANCHOR = r"""\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\fi
+
+"""
+XETEX_FONT_FALLBACK = r"""\ifXeTeX
+  \usepackage{fontspec}
+  \defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
+
+  % XeLaTeX is strict about font names. Use Lato when available, then Helvetica-family
+  % fallbacks, and keep TeX defaults as final fallback (no hard failure).
+  \IfFontExistsTF{Lato}{%
+    \setmainfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica}{%
+      \setmainfont{Helvetica}%
+    }{%
+      \IfFontExistsTF{Helvetica Neue}{%
+        \setmainfont{Helvetica Neue}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setmainfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+
+  \IfFontExistsTF{Lato}{%
+    \setsansfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica Neue}{%
+      \setsansfont{Helvetica Neue}%
+    }{%
+      \IfFontExistsTF{Helvetica}{%
+        \setsansfont{Helvetica}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setsansfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+\fi
+
+"""
+
 
 def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -141,6 +187,23 @@ def escape_tex_skill_invocations(text: str) -> str:
     return "".join(converted)
 
 
+def insert_xetex_font_fallback(text: str) -> tuple[str, int]:
+    """Insert the reviewed XeLaTeX font fallback after the pdfTeX guard."""
+
+    count = text.count(XETEX_FONT_ANCHOR)
+    if count != 1:
+        raise ValueError(
+            "Preambles/header.tex must contain exactly one engine guard"
+        )
+    return (
+        text.replace(
+            XETEX_FONT_ANCHOR,
+            XETEX_FONT_ANCHOR + XETEX_FONT_FALLBACK,
+        ),
+        count,
+    )
+
+
 def adapt_text(
     text: str,
     target_relative: str | None = None,
@@ -151,6 +214,16 @@ def adapt_text(
         if count:
             text = text.replace(old, new)
             applied.append({"from": old, "to": new, "count": count})
+    if target_relative == "assets/project-template/Preambles/header.tex":
+        text, count = insert_xetex_font_fallback(text)
+        applied.append(
+            {
+                "operation": "insert-xetex-font-fallback",
+                "from": "pdfTeX inputenc engine guard",
+                "to": "guarded fontspec Lato/Helvetica/Arial fallback",
+                "count": count,
+            }
+        )
     if target_relative and Path(target_relative).suffix.lower() == ".tex":
         before = text
         text = escape_tex_skill_invocations(text)

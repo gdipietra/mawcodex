@@ -25,6 +25,45 @@
   \usepackage[utf8]{inputenc}
 \fi
 
+\ifXeTeX
+  \usepackage{fontspec}
+  \defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
+
+  % XeLaTeX is strict about font names. Use Lato when available, then Helvetica-family
+  % fallbacks, and keep TeX defaults as final fallback (no hard failure).
+  \IfFontExistsTF{Lato}{%
+    \setmainfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica}{%
+      \setmainfont{Helvetica}%
+    }{%
+      \IfFontExistsTF{Helvetica Neue}{%
+        \setmainfont{Helvetica Neue}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setmainfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+
+  \IfFontExistsTF{Lato}{%
+    \setsansfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica Neue}{%
+      \setsansfont{Helvetica Neue}%
+    }{%
+      \IfFontExistsTF{Helvetica}{%
+        \setsansfont{Helvetica}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setsansfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+\fi
+
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{booktabs}
 \usepackage{graphicx}

@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "package_version": "1.2.0",
-  "generated_at": "2026-07-28T14:35:22.832511+00:00",
+  "package_version": "1.2.1",
+  "generated_at": "2026-08-22T06:03:07.225413+00:00",
   "plugin_validator": {
     "result": "PASS",
     "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\plugin-creator\\scripts\\validate_plugin.py",
-    "validator_sha256": "4e84c911479e4d158d723ed8ccc881d3499e580fbf5650e60d379a1a25ac3186"
+    "validator_sha256": "7a75b3339396402ad9a40ddc1e037e01c54e71a53a3bfb22a01b1ca235c50206"
   },
   "skill_validator": {
     "result": "PASS",
     "passed": 58,
     "total": 58,
     "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
-    "validator_sha256": "5347a0a09cfb546bba1c0d1a30dae0a233d9a05f57bd4e7877155c588bcdabf7"
+    "validator_sha256": "547af3cec2ae71ac2a4ef606365d23a8c58b586862211e9c7a9be7bfd0e30fbb"
   },
   "source_contract": {
     "result": "PASS",
@@ -28,7 +28,7 @@
   },
   "release_snapshot": {
     "algorithm": "sha256",
-    "digest": "a79b825e2749ebef81460017c6d410fe779b817be856abd14b3506191e938705",
-    "file_count": 429
+    "digest": "5c025df7441525f572401e10ed387b9bbe7720193aa30ad4132c8f128c1c4b48",
+    "file_count": 434
   }
 }

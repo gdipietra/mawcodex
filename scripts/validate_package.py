@@ -17,6 +17,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
+try:
+    from .validate_public_site import validate as validate_public_site_tree
+except ImportError:
+    from validate_public_site import validate as validate_public_site_tree
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = Path(
@@ -195,6 +200,66 @@ def escape_project_tex_skill_invocations(text: str) -> tuple[str, int]:
     return "".join(converted), total
 
 
+PROJECT_XETEX_FONT_ANCHOR = r"""\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\fi
+
+"""
+PROJECT_XETEX_FONT_FALLBACK = r"""\ifXeTeX
+  \usepackage{fontspec}
+  \defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
+
+  % XeLaTeX is strict about font names. Use Lato when available, then Helvetica-family
+  % fallbacks, and keep TeX defaults as final fallback (no hard failure).
+  \IfFontExistsTF{Lato}{%
+    \setmainfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica}{%
+      \setmainfont{Helvetica}%
+    }{%
+      \IfFontExistsTF{Helvetica Neue}{%
+        \setmainfont{Helvetica Neue}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setmainfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+
+  \IfFontExistsTF{Lato}{%
+    \setsansfont{Lato}%
+  }{%
+    \IfFontExistsTF{Helvetica Neue}{%
+      \setsansfont{Helvetica Neue}%
+    }{%
+      \IfFontExistsTF{Helvetica}{%
+        \setsansfont{Helvetica}%
+      }{%
+        \IfFontExistsTF{Arial}{%
+          \setsansfont{Arial}%
+        }{}%
+      }%
+    }%
+  }%
+\fi
+
+"""
+
+
+def insert_project_xetex_font_fallback(text: str) -> tuple[str, int]:
+    count = text.count(PROJECT_XETEX_FONT_ANCHOR)
+    if count != 1:
+        return text, count
+    return (
+        text.replace(
+            PROJECT_XETEX_FONT_ANCHOR,
+            PROJECT_XETEX_FONT_ANCHOR + PROJECT_XETEX_FONT_FALLBACK,
+        ),
+        count,
+    )
+
+
 def project_sha256(path: Path, mode: str) -> str:
     return hashlib.sha256(
         canonical_project_bytes(path.read_bytes(), mode)
@@ -215,6 +280,7 @@ def release_snapshot() -> tuple[str, int]:
         "build",
         "dist",
         "tmp",
+        "quality_reports",
     }
     excluded_files = {
         ROOT / "docs" / "conversion" / "OFFICIAL_VALIDATION.json",
@@ -758,6 +824,19 @@ def validate_markdown_links(audit: Audit) -> None:
         audit.pass_("links", "all checked relative Markdown links resolve")
 
 
+def validate_public_site(audit: Audit) -> None:
+    problems = validate_public_site_tree(ROOT)
+    if problems:
+        for problem in problems:
+            audit.fail("public-site", problem)
+    else:
+        audit.pass_(
+            "public-site",
+            "static site, links, credits, manifest URLs, capability ledger, "
+            "and Pages workflow are consistent",
+        )
+
+
 def validate_provenance(audit: Audit, release: bool) -> None:
     required_files = (
         ROOT / "LICENSE",
@@ -1067,6 +1146,21 @@ def validate_project_template_manifest(
                         problems.append(
                             f"{label}: TeX escape count is {observed_count}, "
                             f"expected {expected_count}"
+                        )
+                    continue
+                if operation == "insert-xetex-font-fallback":
+                    expected_count = replacement.get("count")
+                    adapted, observed_count = (
+                        insert_project_xetex_font_fallback(adapted)
+                    )
+                    if expected_count != 1:
+                        problems.append(
+                            f"{label}: malformed XeLaTeX font operation"
+                        )
+                    elif observed_count != expected_count:
+                        problems.append(
+                            f"{label}: XeLaTeX font insertion count is "
+                            f"{observed_count}, expected {expected_count}"
                         )
                     continue
                 if operation is not None:
@@ -1732,6 +1826,7 @@ def main() -> int:
     validate_hooks(audit)
     validate_provider_residue(audit, skills)
     validate_markdown_links(audit)
+    validate_public_site(audit)
     validate_provenance(audit, args.release)
     validate_project_template_manifest(audit, args.release)
     validate_runtime_surface_manifest(audit, args.release)

@@ -8,7 +8,9 @@ rebuilding their execution surfaces for Codex.
 
 ## Current status
 
-Version `1.2.0` is the current stable local package. Its verified inventory is:
+Version `1.2.1` is the current stable package. Its local release evidence and
+the still-separate remote-publication boundary are documented explicitly. The
+verified inventory is:
 
 - 58 packaged skills: 52 source-derived workflows plus the Codex-native JAW,
   CAW, PAW, LAW, UAW, and SAW management capabilities;
@@ -21,6 +23,13 @@ Version `1.2.0` is the current stable local package. Its verified inventory is:
 
 The purple MAW icon, academic pet, and plugin thumbnail in `assets/brand/`
 form the package's original visual identity.
+
+The public website is prepared for
+[GitHub Pages](https://dipietra.github.io/mawcodex/). It gives Pedro H. C.
+Sant'Anna prominent credit, separates the 52 source-derived workflows from
+MAW Codex's native control-plane work, and exposes a capability-by-capability
+translation ledger. Until the repository is pushed and Pages is enabled, the
+site URL is a publication target rather than evidence of a live deployment.
 
 The stable claim, local evidence, and environment-dependent limitations are
 recorded in `docs/conversion/STABILITY.md` and
@@ -47,6 +56,7 @@ upstream changes easy to fetch, compare, and selectively port.
 - `assets/project-template/` contains the installable academic-project
   skeleton: R pipeline, Beamer/Quarto surfaces, governance folders, and
   non-mutating local checks.
+- `docs/*.html` and `docs/assets/` contain the public GitHub Pages site.
 - `docs/conversion/` contains the auditable conversion record.
 
 ManageRAW keeps shared project decisions in tracked `.maw/profile.yaml`,
@@ -71,6 +81,10 @@ Preview and install the package through the canonical local marketplace:
 Restart Codex, enable MAW Codex from the local marketplace shown in the app,
 then use the initializer for each research project. See `docs/INSTALL.md` for
 the complete workflow, including hook trust and source-role setup.
+
+For the public-repository and GitHub Pages release sequence, see
+`docs/PUBLISHING.md`. Preparing these files does not authorize a commit, push,
+tag, GitHub release, marketplace submission, or Pages deployment.
 
 Preview the complete file plan:
 
