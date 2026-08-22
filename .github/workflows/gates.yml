@@ -35,7 +35,7 @@ jobs:
         run: |
           git remote add upstream https://github.com/pedrohcgs/claude-code-my-workflow.git
           git fetch upstream main --no-tags
-          git fetch origin tag v2.1.0
+          git fetch upstream tag v2.1.0
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
