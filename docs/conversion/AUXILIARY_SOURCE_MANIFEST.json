@@ -729,7 +729,7 @@
         },
         {
           "path": "scripts/validate_package.py",
-          "sha256": "3deb7645baf86bcbef42d5d1e9af568e9a2527bcfdf38dbb9683068c7d0c1c1c"
+          "sha256": "a0183a4f83d28e2eef5a73cba8fe8125266edd4ef57b699ba60af0ae02508ab3"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -765,7 +765,7 @@
         },
         {
           "path": "scripts/validate_package.py",
-          "sha256": "3deb7645baf86bcbef42d5d1e9af568e9a2527bcfdf38dbb9683068c7d0c1c1c"
+          "sha256": "a0183a4f83d28e2eef5a73cba8fe8125266edd4ef57b699ba60af0ae02508ab3"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -781,7 +781,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "3deb7645baf86bcbef42d5d1e9af568e9a2527bcfdf38dbb9683068c7d0c1c1c"
+          "sha256": "a0183a4f83d28e2eef5a73cba8fe8125266edd4ef57b699ba60af0ae02508ab3"
         },
         {
           "path": "scripts/refresh_source_manifest.py",
@@ -801,7 +801,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "3deb7645baf86bcbef42d5d1e9af568e9a2527bcfdf38dbb9683068c7d0c1c1c"
+          "sha256": "a0183a4f83d28e2eef5a73cba8fe8125266edd4ef57b699ba60af0ae02508ab3"
         },
         {
           "path": "scripts/refresh_source_manifest.py",
@@ -869,7 +869,7 @@
       "targets": [
         {
           "path": "scripts/validate_package.py",
-          "sha256": "3deb7645baf86bcbef42d5d1e9af568e9a2527bcfdf38dbb9683068c7d0c1c1c"
+          "sha256": "a0183a4f83d28e2eef5a73cba8fe8125266edd4ef57b699ba60af0ae02508ab3"
         },
         {
           "path": "scripts/check_source_clone.py",

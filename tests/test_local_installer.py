@@ -192,6 +192,20 @@ class LocalInstallerTests(unittest.TestCase):
                 ["existing-plugin", "mawcodex"],
             )
 
+    def test_release_snapshot_keeps_package_under_tmp_parent(self) -> None:
+        from scripts import validate_package
+
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "tmp" / "package"
+            package.mkdir(parents=True)
+            (package / "README.md").write_text("portable\n", encoding="utf-8")
+            original_root = validate_package.ROOT
+            try:
+                validate_package.ROOT = package
+                _digest, file_count = validate_package.release_snapshot()
+            finally:
+                validate_package.ROOT = original_root
+            self.assertEqual(file_count, 1)
 
 if __name__ == "__main__":
     unittest.main()

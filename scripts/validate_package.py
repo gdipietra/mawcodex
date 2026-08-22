@@ -291,7 +291,10 @@ def release_snapshot() -> tuple[str, int]:
             for path in ROOT.rglob("*")
             if path.is_file()
             and path not in excluded_files
-            and not any(part in excluded_directories for part in path.parts)
+            and not any(
+                part in excluded_directories
+                for part in path.relative_to(ROOT).parts
+            )
             and path.suffix.lower() not in {".pyc", ".pyo"}
         ),
         key=lambda path: path.relative_to(ROOT).as_posix(),
