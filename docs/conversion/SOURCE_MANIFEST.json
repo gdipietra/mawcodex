@@ -1743,7 +1743,7 @@
       "source": "templates/tikz-snippets/README.md",
       "source_sha256": "2e858f3f15de274cd31543eb7aa4903193c2001869f2b2181938e9fe023c4834",
       "target": "assets/templates/tikz-snippets/README.md",
-      "target_sha256": "553bcc3e7e3c2ea2c164fd28b034c7e50eb3085583e492e195e8a61df97d3101",
+      "target_sha256": "31437f648f0c93bfb72dc10f96de7de80576fb72f48ff1dc982044643a63344f",
       "status": "validated",
       "classification": "direct port",
       "revision_record": "docs/conversion/shared-resources.md",
