@@ -39,7 +39,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verify source clone contract
-        run: python scripts/check_source_clone.py --source .source-baseline
+        run: python scripts/check_source_clone.py .source-baseline
       - name: Validate portable stable evidence
         run: python scripts/validate_package.py --release
       - name: Run packaged skill validators
