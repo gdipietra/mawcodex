@@ -18,9 +18,11 @@ From `C:\Codex\mawcodex`:
 ```
 
 The release validator must pass before installing a development checkout as a
-stable package. The wrapper uses Python from `PATH` when available and
-otherwise locates the Python bundled with the Codex desktop runtime. It does
-not install dependencies or change global settings.
+stable package. The wrapper uses Python from `PATH` when available and intends
+to fall back to the Python bundled with the Codex desktop runtime. In release
+`1.2.2`, a non-runnable WindowsApps `python.exe` alias can be selected first;
+this is an accepted P1 launcher exception, not a successful fallback. The
+wrapper does not install dependencies or change global settings.
 
 ## 2. Preview the local-marketplace installation
 
@@ -36,10 +38,26 @@ The preview writes nothing. It uses `~/plugins/mawcodex` for the plugin and
 catalog entry `./plugins/mawcodex` therefore resolves to the exact copied
 directory.
 
+If the WindowsApps alias prevents the wrapper from running, use the bundled
+Python directly for preview:
+
+```powershell
+& "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
+  C:\Codex\mawcodex\scripts\install_local_plugin.py
+```
+
 Apply the reviewed plan:
 
 ```powershell
 C:\Codex\mawcodex\scripts\maw.cmd install --apply
+```
+
+If the WindowsApps alias blocks this initial apply command, invoke the exact
+bundled-Python fallback directly:
+
+```powershell
+& "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
+  C:\Codex\mawcodex\scripts\install_local_plugin.py --apply
 ```
 
 The installer copies the stable package into `~/plugins/mawcodex`, preserves
@@ -52,6 +70,14 @@ For an existing local-store installation, use the explicit update path:
 
 ```powershell
 C:\Codex\mawcodex\scripts\maw.cmd install --apply --update
+```
+
+When the WindowsApps alias blocks that wrapper command, use the verified
+explicit-runtime update:
+
+```powershell
+& "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
+  C:\Codex\mawcodex\scripts\install_local_plugin.py --apply --update
 ```
 
 This repository release does not mutate the personal marketplace or Codex
@@ -102,8 +128,9 @@ Before importing research materials, edit the generated `AGENTS.md` to record:
 - raw, derived, restricted, and publishable data locations;
 - required estimation, rendering, and disclosure checks.
 
-Then use `$jaw` for initial readiness, `$paw` for shared and personal settings,
-and `$law` only when root or nested instruction layers need specialization.
+Then use `$mawcodex:jaw` for initial readiness, `$mawcodex:paw` for shared and
+personal settings, and `$mawcodex:law` only when root or nested instruction
+layers need specialization.
 Shared choices live in `.maw/profile.yaml`; `.maw/local.yaml` is ignored and
 cannot weaken team requirements. The project-local `manageraw` agent may
 coordinate these skills after its TOML and portable role have been reviewed.
@@ -117,10 +144,10 @@ files under `.codex/agents/`.
 Invoke a workflow naturally or name its skill, for example:
 
 ```text
-Use $interview-me to turn this idea into a research specification.
-Use $did-event-study to plan the staggered-adoption analysis.
-Use $review-paper for an adversarial manuscript review.
-Use $replication-package to assemble a local deposit package.
+Use $mawcodex:interview-me to turn this idea into a research specification.
+Use $mawcodex:did-event-study to plan the staggered-adoption analysis.
+Use $mawcodex:review-paper for an adversarial manuscript review.
+Use $mawcodex:replication-package to assemble a local deposit package.
 ```
 
 The skills require separate authorization before commit, push, submission,

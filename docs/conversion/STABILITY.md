@@ -19,11 +19,17 @@ Current target: `1.2.2` stable.
 | Representative forward tests | all required scenarios PASS | PASS |
 | Deterministic unit tests | all local tests PASS | PASS |
 | Official Codex validators | plugin and 58 skills PASS | PASS |
-| Known limitations | documented, no blockers | PASS |
+| Known limitations | documented within the installed-plugin stability boundary | PASS |
 | Public-site structure | static site, legal pages, and Pages workflow present | PASS |
 
 The evidence behind this matrix is in `OFFICIAL_VALIDATION.json`,
-`FORWARD_TEST_RESULTS.json`, and `RELEASE_REPORT.md`. The stable claim covers
-the package and its safety contracts; operations that require optional
-academic runtimes or institution-specific clearance retain their documented
-`UNVERIFIED` boundary until run in the target project.
+`FORWARD_TEST_RESULTS.json`, `RELEASE_REPORT.md`, and
+`PUBLIC_RELEASE_READINESS-1.2.2.md`. The stable claim covers the package and
+its safety contracts; operations that require optional academic runtimes or
+institution-specific clearance retain their documented `UNVERIFIED` boundary
+until run in the target project.
+The known-limitations PASS means that limitations are disclosed consistently
+inside the claimed installed-plugin boundary. It does not mark every launcher
+or maintenance entry point as functioning. The Windows `maw.cmd` defect is an
+accepted P1 exception with an explicit-runtime workaround; broader public
+announcement remains pending the separate readiness gates.

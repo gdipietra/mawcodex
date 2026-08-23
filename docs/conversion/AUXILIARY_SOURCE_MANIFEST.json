@@ -193,7 +193,7 @@
       "targets": [
         {
           "path": "CHANGELOG.md",
-          "sha256": "b758619caedc3c8b15022dfcd6feeb1adcaa7cb466115ba8738779dc730b82b7"
+          "sha256": "a008af71b435ecd090e6478d947b586719109e61696210de13d3e88d239cc7f0"
         },
         {
           "path": "NOTICE.md",
@@ -293,11 +293,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -329,11 +329,11 @@
       "targets": [
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/KNOWN_LIMITATIONS.md",
-          "sha256": "d558fd0ae9ea58588cb627626dbccaacaab1c3893266ebb9760cfc538dfab006"
+          "sha256": "5d70adce7f65cfcf2ea40022ae9ea9236418166d4a93d07cc29e7208c06444d1"
         }
       ],
       "revision_record": "docs/conversion/AUXILIARY_SOURCE_MAP.md",
@@ -349,11 +349,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -373,11 +373,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -413,11 +413,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -437,11 +437,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -461,11 +461,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -485,11 +485,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",
@@ -509,11 +509,11 @@
       "targets": [
         {
           "path": "README.md",
-          "sha256": "2b869788ce4fcca0ab592118d0bf67390d7f2e8bace4ab93367f3c91f1f4d367"
+          "sha256": "adcfc1e2fdc7fc6ef220dcd9a7e0ae0e000bbee532a1a99a810d947f733f55c3"
         },
         {
           "path": "docs/INSTALL.md",
-          "sha256": "c25a8f601d589f7d2e661b4c54889cb7e093647ae4d554f075298fdcadb36fe5"
+          "sha256": "bda6849823ab22b3afb47d4f3e7edd77e05bdc1df4706c63a1e9086815f909c2"
         },
         {
           "path": "docs/conversion/README.md",

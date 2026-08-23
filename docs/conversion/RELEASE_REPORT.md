@@ -9,12 +9,12 @@ preserves the fixed upstream academic workflow's intent while replacing its
 provider-specific runtime surfaces with Codex-native skills, project agents,
 portable roles, opt-in hooks, and explicit verification boundaries.
 
-This patch release adds a public EN-US documentation surface and publication
-metadata without changing the fixed source boundary. The website gives Pedro
-H. C. Sant'Anna direct original-work credit, provides a capability-level map
-of the 52 adapted workflows, and documents the six native management skills
-plus ManageRAW separately. It also records the portable Lato/Helvetica
-fallback added to the shared XeLaTeX preamble.
+The public EN-US documentation surface and the portable Lato/Helvetica
+fallback were introduced in `1.2.1` and are carried forward unchanged in this
+release. The actual `1.2.2` delta is the GitHub identity migration, validation
+hardening, expanded project-template provenance, correction of the deep-audit
+test command, and pinning plus hash verification of the official Codex skill
+validator. The fixed source boundary remains unchanged.
 
 ## Inventory and semantic review
 
@@ -41,7 +41,7 @@ fallback added to the shared XeLaTeX preamble.
 - Seventeen independent forward tests pass, including missing-runtime,
   restricted-data, disclosure, publication, Git-scope, and evidence-gap
   scenarios.
-- Forty-eight deterministic unit tests pass across executable-asset syntax,
+- Fifty-one deterministic unit tests pass across executable-asset syntax,
   hook behavior, the POSIX launcher, project initialization, ManageRAW state,
   local installation, provenance, and semantic contracts.
 - All source/target component hashes, 18 project-template transformations,
@@ -78,10 +78,17 @@ or institutional disclosure operations have run in every future project.
 Those checks remain `UNVERIFIED` until the required runtime, source, or human
 authority is available.
 
-The canonical remote is `https://github.com/gdipietra/mawcodex.git`. Local
-release gates do not establish remote deployment: the pushed commit and its
-`stable-gates` and `github-pages` runs require separate post-push verification.
-No GitHub Release or marketplace-publication result is claimed by this report.
+The canonical remote is `https://github.com/gdipietra/mawcodex.git`. The remote
+runs below are historical deployed-snapshot evidence for commit
+`02c76b2c91f673b634c8496b3c49fbd422bbee09`, distinct from the current repaired
+local tree pending publication:
+[stable-gates run 32603918490](https://github.com/gdipietra/mawcodex/actions/runs/32603918490)
+passed on Windows and Ubuntu, and
+[GitHub Pages run 32603918449](https://github.com/gdipietra/mawcodex/actions/runs/32603918449)
+passed build and deployment. The current readiness-document changes postdate
+that commit and require an authorized push plus fresh remote checks before
+sharing the repository as the reviewed public surface. No GitHub Release is
+claimed by this report.
 
 ## GitHub username migration (2026-08-22)
 
@@ -89,3 +96,18 @@ Release `1.2.2` changes the operational repository and Pages identity to
 `gdipietra`. The release gates bind current source evidence to the new fork and
 Pedro H. C. Sant'Anna's upstream. Live deployment is a separate post-push gate;
 a successful local release snapshot does not by itself prove Pages availability.
+
+## Known issue disposition and public sharing
+
+On Windows, `scripts/maw.cmd` can select the non-runnable WindowsApps
+`python.exe` alias before the bundled Codex runtime. The explicit-runtime
+workaround is verified, and the installed plugin is not affected after Codex
+loads it. This operational launcher limitation is documented for `1.2.2`; it
+does not imply or promise a `1.2.3` release.
+
+The controlled communication decision and evidence boundary are recorded in
+`PUBLIC_RELEASE_READINESS-1.2.2.md`. The local package is ready for review,
+first by Pedro H. C. Sant'Anna and then by a small group of close colleagues.
+The repository and site links remain pending authorized publication and
+post-push verification. Broader announcement remains a deliberate human
+decision after that feedback sequence.

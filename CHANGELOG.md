@@ -13,7 +13,15 @@ All notable MAW Codex changes are documented here.
 - Added explicit per-component classification and revision summaries to the
   project-template provenance manifest.
 - Corrected the deep-audit hook test command to invoke the packaged unit tests.
-- Pinned and hash-verifies the official OpenAI Codex skill validator for portable CI.
+- Pinned and hash-verified the official OpenAI Codex skill validator for portable CI.
+
+### Known issues
+
+- On Windows, `scripts/maw.cmd` may select the non-runnable WindowsApps
+  `python.exe` alias before the bundled Codex runtime. Release `1.2.2` remains
+  usable after installation; maintenance commands can use an explicit Python
+  3 executable. This accepted P1 launcher exception does not imply or promise
+  a `1.2.3` release.
 
 ## [1.2.1] - 2026-08-22
 
@@ -64,7 +72,7 @@ All notable MAW Codex changes are documented here.
 
 ### Added
 
-- JAW (`$jaw`), a Codex-native readiness skill for joining MAW to ongoing
+- JAW (`$mawcodex:jaw`), a Codex-native readiness skill for joining MAW to ongoing
   research, teaching, or mixed academic projects without overwriting their
   history, instructions, or source authority.
 - Research, teaching, and deployment-report profiles for plugin-only, thin,

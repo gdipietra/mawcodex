@@ -3,7 +3,8 @@
 | Field | Value |
 | --- | --- |
 | Upstream repository | `https://github.com/pedrohcgs/claude-code-my-workflow` |
-| User fork | `https://github.com/dipietra/claude-code-my-workflow` |
+| Historical user fork (baseline-time identity) | `https://github.com/dipietra/claude-code-my-workflow` |
+| Current superseding origin | `https://github.com/gdipietra/claude-code-my-workflow` |
 | Local clone | `C:\GitHub\claude-code-my-workflow` |
 | Branch | `main` |
 | Release | `v2.1.0` |
@@ -11,6 +12,11 @@
 | Commit date | `2026-06-10T14:20:18-04:00` |
 | Baseline fixed | `2026-07-28` |
 | License | MIT |
+
+The historical fork URL records the identity in force when the baseline was
+fixed. The current `gdipietra` origin supersedes that repository namespace but
+does not change the immutable baseline commit, source clone, branch, release,
+or source-boundary contract.
 
 ## Initial Claude artifact inventory
 

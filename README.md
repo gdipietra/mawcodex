@@ -1,6 +1,6 @@
 # MAW Codex
 
-> **Canonical publication target:** https://gdipietra.github.io/mawcodex/ from https://github.com/gdipietra/mawcodex. Each release is considered deployed only after its authorized push and GitHub Pages workflow are verified.
+> **Canonical publication target:** https://gdipietra.github.io/mawcodex/ from https://github.com/gdipietra/mawcodex. The verified remote evidence is a historical deployed snapshot at commit `02c76b2c91f673b634c8496b3c49fbd422bbee09`; the current repaired tree awaits an authorized commit and push plus fresh CI and GitHub Pages verification.
 
 MAW Codex is a Codex-native academic-workflow package derived from
 [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow).
@@ -10,9 +10,9 @@ rebuilding their execution surfaces for Codex.
 
 ## Current status
 
-Version `1.2.2` is the current stable package. Its local release evidence and
-the still-separate remote-publication boundary are documented explicitly. The
-verified inventory is:
+Version `1.2.2` is the current stable package. Its local evidence, historical
+deployed snapshot, known limitations, and controlled public-sharing boundary
+are documented explicitly. The verified inventory is:
 
 - 58 packaged skills: 52 source-derived workflows plus the Codex-native JAW,
   CAW, PAW, LAW, UAW, and SAW management capabilities;
@@ -26,15 +26,21 @@ verified inventory is:
 The purple MAW icon, academic pet, and plugin thumbnail in `assets/brand/`
 form the package's original visual identity.
 
-The public website is prepared for
+The historical deployed website snapshot at commit
+`02c76b2c91f673b634c8496b3c49fbd422bbee09` is available on
 [GitHub Pages](https://gdipietra.github.io/mawcodex/). It gives Pedro H. C.
 Sant'Anna prominent credit, separates the 52 source-derived workflows from
 MAW Codex's native control-plane work, and exposes a capability-by-capability
-The site URL is a publication target rather than evidence of a live deployment.
+provenance ledger. The current repaired tree is not yet represented by that
+deployment and awaits an authorized commit and push plus fresh CI and Pages
+verification.
 
-The stable claim, local evidence, and environment-dependent limitations are
-recorded in `docs/conversion/STABILITY.md` and
-`docs/conversion/RELEASE_REPORT.md`.
+The stable claim, local and remote evidence, environment-dependent limitations,
+and public-sharing sequence are recorded in the
+[stability matrix](docs/conversion/STABILITY.md),
+[release report](docs/conversion/RELEASE_REPORT.md),
+[known limitations](docs/conversion/KNOWN_LIMITATIONS.md), and
+[public-release readiness statement](docs/conversion/PUBLIC_RELEASE_READINESS-1.2.2.md).
 
 ## Repository roles
 
@@ -64,9 +70,10 @@ ManageRAW keeps shared project decisions in tracked `.maw/profile.yaml`,
 personal non-weakening choices in ignored `.maw/local.yaml`, and actual Codex
 instruction authority in root and nested `AGENTS.md`.
 
-For an ongoing project, begin with `$jaw`. After readiness is established,
-use `$caw` for plugin ownership, `$paw` for project settings, and `$law` for
-root or nested instructions. `$uaw` and `$saw` are explicit-only maintenance
+For an ongoing project, begin with `$mawcodex:jaw`. After readiness is
+established, use `$mawcodex:caw` for plugin ownership, `$mawcodex:paw` for
+project settings, and `$mawcodex:law` for root or nested instructions.
+`$mawcodex:uaw` and `$mawcodex:saw` are explicit-only maintenance
 operations. The `manageraw` project agent coordinates these capabilities when
 the full or selected agent configuration is installed.
 
@@ -79,12 +86,20 @@ Preview and install the package through the canonical local marketplace:
 .\scripts\maw.cmd install --apply
 ```
 
+Known Windows `1.2.2` issue: if `maw.cmd` selects the non-runnable
+WindowsApps `python.exe` alias, use the bundled runtime explicitly:
+
+```powershell
+& "$env:USERPROFILE\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
+  .\scripts\install_local_plugin.py --apply
+```
+
 Restart Codex, enable MAW Codex from the local marketplace shown in the app,
-then use the initializer for each research project. See `docs/INSTALL.md` for
+then use the initializer for each research project. See the [installation guide](docs/INSTALL.md) for
 the complete workflow, including hook trust and source-role setup.
 
-For the public-repository and GitHub Pages release sequence, see
-`docs/PUBLISHING.md`. Preparing these files does not authorize a commit, push,
+For the public-repository and GitHub Pages release sequence, see the
+[publishing guide](docs/PUBLISHING.md). Preparing these files does not authorize a commit, push,
 tag, GitHub release, marketplace submission, or Pages deployment.
 
 Preview the complete file plan:
@@ -119,7 +134,7 @@ provenance, links, and provider-specific residue.
 
 ## Upstream updates
 
-See `docs/UPSTREAM_SYNC.md`. The short form is: fetch `upstream` in the source
+See the [upstream synchronization guide](docs/UPSTREAM_SYNC.md). The short form is: fetch `upstream` in the source
 fork, compare the recorded baseline with the new tag or commit, update the
 component inventory, and port only reviewed deltas into this repository.
 

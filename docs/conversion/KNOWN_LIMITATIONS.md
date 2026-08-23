@@ -23,6 +23,26 @@ depends on the host environment or an explicit user choice.
 - Initialized projects receive files only. The initializer does not install
   the plugin globally or change the user's Codex configuration.
 
+### Windows maintenance launcher
+
+- In release `1.2.2`, `scripts/maw.cmd` can select the Microsoft WindowsApps
+  `python.exe` app-execution alias before the bundled Codex Python runtime. The
+  wrapper then exits with the Microsoft Store "Python was not found" message.
+- The defect affects Windows maintenance commands routed through `maw.cmd`; it
+  does not affect discovery or execution of an already installed plugin's
+  skills. Before this audit and under separate authorization, the `1.2.2`
+  personal-store update succeeded by invoking `scripts/install_local_plugin.py`
+  with the bundled Codex Python explicitly. This audit performs no personal-store
+  update.
+- The supported workaround is to invoke the required script with a known
+  Python 3 executable. A future authorized fix should probe each discovered
+  candidate and continue to the bundled runtime when a candidate cannot
+  execute Python 3.
+- This is an accepted P1 launcher exception in `1.2.2`. The explicit-runtime
+  workaround permits controlled use but does not make the advertised Windows
+  entry point pass. No `1.2.3` release or immediate launcher evolution is
+  promised by this statement.
+
 ## Optional academic runtimes
 
 - LaTeX, Quarto, R, Stata, Julia, Pandoc, and journal-specific utilities are
@@ -58,11 +78,11 @@ depends on the host environment or an explicit user choice.
 ## Verification boundary
 
 - Structural, provenance, hook, initializer, and representative workflow
-  checks are local release gates. The included GitHub Actions workflow has not
-  run remotely until this independent repository is published to GitHub.
-- The GitHub Pages URL in public metadata is the intended publisher-controlled
-  endpoint. It is not verified live until the repository exists at the stated
-  URL, Pages uses GitHub Actions as its source, and the deployment completes.
+  checks are local release gates. Remote CI remains a separate post-push gate;
+  for `1.2.2`, stable-gates run `32603918490` passed on Windows and Ubuntu.
+- The publisher-controlled GitHub Pages endpoint is live at
+  `https://gdipietra.github.io/mawcodex/`. Pages run `32603918449` passed its
+  build and deployment jobs; later pushes still require separate verification.
 - Representative forward tests exercise high-risk decisions and failure
   semantics. They do not substitute for compiling every possible manuscript,
   running every supported statistical package, or validating every
@@ -87,6 +107,9 @@ retired Pages namespace is not a supported endpoint.
 ### Local marketplace state after release 1.2.2
 
 Publishing the repository and GitHub Pages does not update the canonical
-personal-store copy or an existing Codex cache. Those external local surfaces
-may remain on `1.2.0` until a separately authorized installer update is run;
-release `1.2.2` does not claim otherwise.
+personal-store copy or an existing Codex cache. Before this audit, on
+2026-08-23 and under separate authorization, the canonical personal-store copy
+was updated to `1.2.2`, and Codex loaded the `1.2.2` cache after restart. This
+audit performs no store update. The earlier update used the explicit
+bundled-Python workaround above, so it does not represent the `maw.cmd`
+launcher defect as fixed.
