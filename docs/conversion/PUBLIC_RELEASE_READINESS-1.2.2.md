@@ -2,7 +2,7 @@
 
 Statement date: 2026-08-23
 
-Status: **PREPARED LOCALLY; PUBLICATION GATES PENDING**
+Status: **PUBLISHED AND POST-PUSH VERIFIED AT CHECKPOINT `cc82cede0eed6b721f23cc82862e0ad189db2824`**
 
 ## Decision
 
@@ -18,20 +18,18 @@ documentation are understandable without conversion history in hand.
 
 ## Verified basis
 
-- The canonical repository target is `https://github.com/gdipietra/mawcodex`,
-  and the historical deployed site snapshot is available at
-  `https://gdipietra.github.io/mawcodex/`.
-- For commit `02c76b2c91f673b634c8496b3c49fbd422bbee09`,
-  [stable-gates run 32603918490](https://github.com/gdipietra/mawcodex/actions/runs/32603918490)
-  passed on Windows and Ubuntu, and
-  [Pages run 32603918449](https://github.com/gdipietra/mawcodex/actions/runs/32603918449)
+- Commit `cc82cede0eed6b721f23cc82862e0ad189db2824` is the verified
+  publication/content checkpoint on the canonical repository
+  `https://github.com/gdipietra/mawcodex`.
+- [Stable-gates run 32666609822](https://github.com/gdipietra/mawcodex/actions/runs/32666609822)
+  passed on Windows and Ubuntu.
+- [GitHub Pages run 32666609835](https://github.com/gdipietra/mawcodex/actions/runs/32666609835)
   passed build and deployment.
-- Those remote runs apply only to that historical snapshot. The current
-  repaired local tree awaits an authorized commit and push plus fresh CI and
-  Pages verification.
-- The current local tree passes the plugin validator, all 58 skill validators,
-  all 51 deterministic unit tests, and all 14 stable-package checks. These
-  local results are not yet bound to a pushed commit or fresh remote runs.
+- The public site at `https://gdipietra.github.io/mawcodex/` returned HTTP 200,
+  and the repository homepage metadata uses that canonical URL.
+- This remote evidence validates checkpoint
+  `cc82cede0eed6b721f23cc82862e0ad189db2824` only. Later commits, including
+  documentation evidence updates, require fresh same-SHA remote verification.
 - The public site gives Pedro H. C. Sant'Anna direct original-work credit and
   distinguishes 52 source-derived capabilities from MAW Codex's native
   management and control-plane additions.
@@ -58,23 +56,21 @@ promised. The exception and exact workaround must accompany any preview. If
 future maintenance is authorized, the launcher should probe candidate
 executables and include a regression test for a non-runnable PATH alias.
 
-## Publication prerequisites
+## Completed publication verification
 
-Before the repository or site is sent as the reviewed public surface:
-
-1. Obtain explicit authorization to commit and push these documentation and
-   evidence changes.
-2. Update the GitHub repository Website metadata from the retired `dipietra`
-   Pages URL to `https://gdipietra.github.io/mawcodex/`.
-3. Verify the pushed content, a fresh Windows/Ubuntu stable-gates run, and a
-   fresh Pages deployment against the same head SHA.
-4. Optionally create an open GitHub issue for the accepted launcher exception;
-   issue creation remains a separately authorized external action.
+- Commit `cc82cede0eed6b721f23cc82862e0ad189db2824` was pushed to `main`
+  under separate explicit authorization.
+- Stable-gates run `32666609822` succeeded.
+- GitHub Pages run `32666609835` succeeded.
+- The public Pages endpoint returned HTTP 200.
+- Repository homepage metadata uses the canonical Pages URL.
+- GitHub issue `#1` is open with no milestone.
+- These facts establish the verified publication/content checkpoint; they do
+  not remotely validate later commits.
 
 ## Communication sequence
 
-1. After the publication prerequisites pass, send Pedro the repository and
-   live-site links, explain the Codex-native
+1. Send Pedro the repository and live-site links, explain the Codex-native
    adaptation and native management additions, and invite corrections or
    collaboration without requesting endorsement.
 2. After Pedro has had a reasonable opportunity to respond, share with a
@@ -86,17 +82,16 @@ Before the repository or site is sent as the reviewed public surface:
 
 ## Issue tracking boundary
 
-An open GitHub issue is a reasonable way to track the Windows launcher defect,
-with a title such as `Windows: maw.cmd can select the non-runnable WindowsApps
-Python alias`. No issue is claimed to exist until its creation is explicitly
-authorized and confirmed on GitHub.
+GitHub [issue #1](https://github.com/gdipietra/mawcodex/issues/1) tracks the
+Windows launcher defect and is open with no milestone.
 
 ## Readiness conclusion
 
 **Local package for Pedro's review: READY, with disclosed P1 exception.**
 
-**Repository and site links as the reviewed surface: PENDING PUBLICATION AND
-POST-PUSH VERIFICATION.**
+**Repository and site links at verified publication/content checkpoint
+`cc82cede0eed6b721f23cc82862e0ad189db2824`: PUBLISHED AND VERIFIED.**
 
-**Broad public announcement: NOT READY**, pending the publication gates and
-planned human feedback sequence, not additional `1.2.x` engineering.
+**Broad public announcement: NOT READY**, pending the planned human-feedback
+sequence rather than publication infrastructure or additional `1.2.x`
+engineering.

@@ -78,17 +78,16 @@ or institutional disclosure operations have run in every future project.
 Those checks remain `UNVERIFIED` until the required runtime, source, or human
 authority is available.
 
-The canonical remote is `https://github.com/gdipietra/mawcodex.git`. The remote
-runs below are historical deployed-snapshot evidence for commit
-`02c76b2c91f673b634c8496b3c49fbd422bbee09`, distinct from the current repaired
-local tree pending publication:
-[stable-gates run 32603918490](https://github.com/gdipietra/mawcodex/actions/runs/32603918490)
+The canonical remote is `https://github.com/gdipietra/mawcodex.git`. Commit
+`cc82cede0eed6b721f23cc82862e0ad189db2824` is the verified
+publication/content checkpoint on `main`:
+[stable-gates run 32666609822](https://github.com/gdipietra/mawcodex/actions/runs/32666609822)
 passed on Windows and Ubuntu, and
-[GitHub Pages run 32603918449](https://github.com/gdipietra/mawcodex/actions/runs/32603918449)
-passed build and deployment. The current readiness-document changes postdate
-that commit and require an authorized push plus fresh remote checks before
-sharing the repository as the reviewed public surface. No GitHub Release is
-claimed by this report.
+[GitHub Pages run 32666609835](https://github.com/gdipietra/mawcodex/actions/runs/32666609835)
+passed build and deployment. The public Pages endpoint returned HTTP 200, and
+the repository homepage metadata uses the canonical Pages URL. These results
+validate that checkpoint only; later commits require fresh same-SHA remote
+verification. No GitHub Release is claimed by this report.
 
 ## GitHub username migration (2026-08-22)
 
@@ -106,8 +105,10 @@ loads it. This operational launcher limitation is documented for `1.2.2`; it
 does not imply or promise a `1.2.3` release.
 
 The controlled communication decision and evidence boundary are recorded in
-`PUBLIC_RELEASE_READINESS-1.2.2.md`. The local package is ready for review,
-first by Pedro H. C. Sant'Anna and then by a small group of close colleagues.
-The repository and site links remain pending authorized publication and
-post-push verification. Broader announcement remains a deliberate human
-decision after that feedback sequence.
+`PUBLIC_RELEASE_READINESS-1.2.2.md`. The repository and site links for
+verified publication/content checkpoint
+`cc82cede0eed6b721f23cc82862e0ad189db2824` are published and post-push
+verified. That evidence does not validate later documentation commits, which
+require fresh same-SHA remote verification. Review should proceed first with
+Pedro H. C. Sant'Anna and then with a small group of close colleagues. Broader
+announcement remains a deliberate human decision after that feedback sequence.

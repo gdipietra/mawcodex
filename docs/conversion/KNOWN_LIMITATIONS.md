@@ -78,11 +78,15 @@ depends on the host environment or an explicit user choice.
 ## Verification boundary
 
 - Structural, provenance, hook, initializer, and representative workflow
-  checks are local release gates. Remote CI remains a separate post-push gate;
-  for `1.2.2`, stable-gates run `32603918490` passed on Windows and Ubuntu.
+  checks are local release gates. Remote CI remains a separate post-push gate.
+  For verified publication/content checkpoint
+  `cc82cede0eed6b721f23cc82862e0ad189db2824`, stable-gates run `32666609822`
+  passed on Windows and Ubuntu.
 - The publisher-controlled GitHub Pages endpoint is live at
-  `https://gdipietra.github.io/mawcodex/`. Pages run `32603918449` passed its
-  build and deployment jobs; later pushes still require separate verification.
+  `https://gdipietra.github.io/mawcodex/`. Pages run `32666609835` passed its
+  build and deployment jobs, the public endpoint returned HTTP 200, and the
+  repository homepage metadata is canonical. These results apply to that
+  checkpoint; later commits require separate same-SHA verification.
 - Representative forward tests exercise high-risk decisions and failure
   semantics. They do not substitute for compiling every possible manuscript,
   running every supported statistical package, or validating every

@@ -1,6 +1,6 @@
 # MAW Codex
 
-> **Canonical publication target:** https://gdipietra.github.io/mawcodex/ from https://github.com/gdipietra/mawcodex. The verified remote evidence is a historical deployed snapshot at commit `02c76b2c91f673b634c8496b3c49fbd422bbee09`; the current repaired tree awaits an authorized commit and push plus fresh CI and GitHub Pages verification.
+> **Verified publication checkpoint:** https://gdipietra.github.io/mawcodex/ from https://github.com/gdipietra/mawcodex. Commit `cc82cede0eed6b721f23cc82862e0ad189db2824` is the verified publication/content checkpoint: stable-gates run `32666609822` and GitHub Pages run `32666609835` succeeded, the public endpoint returned HTTP 200, and the repository homepage metadata uses the canonical Pages URL. Later commits require separate same-SHA verification.
 
 MAW Codex is a Codex-native academic-workflow package derived from
 [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow).
@@ -26,14 +26,15 @@ are documented explicitly. The verified inventory is:
 The purple MAW icon, academic pet, and plugin thumbnail in `assets/brand/`
 form the package's original visual identity.
 
-The historical deployed website snapshot at commit
-`02c76b2c91f673b634c8496b3c49fbd422bbee09` is available on
+The public website content at verified publication checkpoint
+`cc82cede0eed6b721f23cc82862e0ad189db2824` is live on
 [GitHub Pages](https://gdipietra.github.io/mawcodex/). It gives Pedro H. C.
 Sant'Anna prominent credit, separates the 52 source-derived workflows from
 MAW Codex's native control-plane work, and exposes a capability-by-capability
-provenance ledger. The current repaired tree is not yet represented by that
-deployment and awaits an authorized commit and push plus fresh CI and Pages
-verification.
+provenance ledger. For that checkpoint, stable-gates run `32666609822` and
+GitHub Pages run `32666609835` succeeded, the public endpoint returned HTTP
+200, and the repository homepage metadata is canonical. Later commits require
+separate same-SHA verification.
 
 The stable claim, local and remote evidence, environment-dependent limitations,
 and public-sharing sequence are recorded in the
