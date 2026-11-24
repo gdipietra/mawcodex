@@ -5,9 +5,17 @@
   var links = document.querySelector(".nav-links");
 
   if (toggle && links) {
+    toggle.closest(".nav").classList.add("has-menu");
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(open));
+    });
+    toggle.closest(".nav").addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && links.classList.contains("open")) {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
     });
     links.addEventListener("click", function (event) {
       if (event.target.tagName === "A") {
@@ -15,26 +23,6 @@
         toggle.setAttribute("aria-expanded", "false");
       }
     });
-  }
-
-  document.querySelectorAll("[data-year]").forEach(function (node) {
-    node.textContent = String(new Date().getFullYear());
-  });
-
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var revealNodes = document.querySelectorAll(".reveal");
-  if (reduced || !("IntersectionObserver" in window)) {
-    revealNodes.forEach(function (node) { node.classList.add("visible"); });
-  } else {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealNodes.forEach(function (node) { observer.observe(node); });
   }
 
   var grid = document.querySelector("[data-capability-grid]");
@@ -45,7 +33,8 @@
   var query = document.querySelector("[data-capability-search]");
   var count = document.querySelector("[data-capability-count]");
   var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
-  var requestedFilter = new URLSearchParams(window.location.search).get("filter");
+  var params = new URLSearchParams(window.location.search);
+  var requestedFilter = params.get("filter");
   var availableFilters = buttons.map(function (button) {
     return button.getAttribute("data-filter");
   });
@@ -65,14 +54,10 @@
   function card(item) {
     return [
       '<article class="capability" data-origin="' + escapeHtml(item.origin) + '">',
-      '<div class="meta">',
-      '<span class="badge">' + escapeHtml(item.origin === "adapted" ? "Pedro v2.1.0 lineage" : "MAW Codex original") + '</span>',
-      '<span class="badge">' + escapeHtml(item.family) + '</span>',
-      '<span class="badge">' + escapeHtml(item.mode) + '</span>',
-      '</div>',
-      '<h2><code>$' + escapeHtml(item.name) + '</code></h2>',
+      '<h3><code>$mawcodex:' + escapeHtml(item.name) + '</code></h3>',
+      '<p class="meta">' + escapeHtml([item.family, item.mode].join(" / ")) + '</p>',
       '<p>' + escapeHtml(item.summary) + '</p>',
-      '<p class="translation"><strong>Codex translation:</strong> ' + escapeHtml(item.translation) + '</p>',
+      '<p class="translation">' + escapeHtml(item.translation) + '</p>',
       '</article>'
     ].join("");
   }
@@ -81,11 +66,11 @@
     var needle = query ? query.value.trim().toLowerCase() : "";
     var visible = window.MAW_CAPABILITIES.filter(function (item) {
       var filterMatch = active === "all" || item.origin === active || item.family === active;
-      var haystack = [item.name, item.family, item.mode, item.summary, item.translation].join(" ").toLowerCase();
+      var haystack = ["$mawcodex:" + item.name, item.family, item.mode, item.summary, item.translation].join(" ").toLowerCase();
       return filterMatch && (!needle || haystack.indexOf(needle) !== -1);
     });
 
-    grid.innerHTML = visible.map(card).join("");
+    grid.innerHTML = visible.length ? visible.map(card).join("") : "<p>No skills match this search.</p>";
     if (count) {
       count.textContent = visible.length + " of " + window.MAW_CAPABILITIES.length + " skills";
     }
@@ -102,6 +87,7 @@
   });
 
   if (query) {
+    query.value = params.get("q") || "";
     query.addEventListener("input", render);
   }
 

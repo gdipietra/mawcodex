@@ -5,7 +5,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Checks numerical manuscript claims against actual R, Stata, or Python outputs under declared tolerances.",
-    translation: "Recasts the upstream audit as an evidence table with PASS, FAIL, EXPLAINED, and UNMATCHED states; an unavailable runtime can never become a pass."
+    translation: "Records each claim and its evidence in a table with PASS, FAIL, EXPLAINED, or UNMATCHED. A missing runtime leaves the claim unverified."
   },
   {
     name: "capture-environment",
@@ -20,8 +20,8 @@ window.MAW_CAPABILITIES = [
     family: "Project operations",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Saves a compact, durable state snapshot before a stop, handoff, or context transition.",
-    translation: "Moves continuity from provider transcript assumptions to explicit project files with decisions, line-level pointers, open questions, and next actions."
+    summary: "Saves a checkpoint before a handoff or pause so the next session can pick up the work.",
+    translation: "Saves decisions, file and line references, open questions, and next steps in a project file that another session can read."
   },
   {
     name: "coauthor-brief",
@@ -37,7 +37,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Carries out only the precise Git or GitHub action the user authorizes.",
-    translation: "Replaces broad provider permissions with action-scoped consent, staged-file review, quality gates, and a hard distinction between commit, push, PR, and merge."
+    translation: "Shows exactly which files are staged and checks them before committing. Each action needs its own approval, including pushing, opening a pull request, and merging."
   },
   {
     name: "compile-latex",
@@ -45,15 +45,15 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Builds Beamer decks with XeLaTeX passes and bibliography handling from the correct source context.",
-    translation: "Discovers the actual compiler and reports missing XeLaTeX or fonts as UNVERIFIED; the shared template now checks Lato and Helvetica fallbacks."
+    translation: "Finds the compiler on the current machine and marks missing fonts or XeLaTeX as UNVERIFIED. The shared template includes fallbacks for Lato and Helvetica."
   },
   {
     name: "compress-session",
     family: "Project operations",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Distills a noisy task into a structured session log with decisions, dead ends, and continuation points.",
-    translation: "Persists only reviewable task state in project files, not private transcript serialization or inferred context telemetry."
+    summary: "Writes a session log that explains what was decided, what was ruled out, and where to resume.",
+    translation: "Saves the log as a project file that the next session can read and review."
   },
   {
     name: "context-status",
@@ -61,7 +61,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Reports the observable plan, checkpoint, session log, working tree, and context-preservation state.",
-    translation: "Replaces the upstream private status-line parser with supported UI state and explicit evidence, marking unavailable telemetry as unavailable."
+    translation: "Reads status from supported Codex surfaces and saved project files. It reports which context metrics are available."
   },
   {
     name: "create-lecture",
@@ -69,7 +69,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Builds a new Beamer lecture from supplied sources with notation and preamble consistency.",
-    translation: "Turns source ingestion, instructor choices, drafting, compilation, and review into explicit phases instead of assuming globally available files or commands."
+    translation: "Checks which sources and tools are available, records the instructor's choices, and then drafts, compiles, and reviews the lecture."
   },
   {
     name: "data-analysis",
@@ -77,7 +77,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Creates a numbered, reproducible R workflow from an observed dataset through verified tables and figures.",
-    translation: "Adds data-sensitivity orientation, descriptive-versus-causal separation, immutable raw-data rules, output routing, and execution evidence."
+    translation: "Checks data sensitivity first and preserves the raw files. It distinguishes descriptive analysis from causal analysis and records which scripts and outputs were produced."
   },
   {
     name: "data-management-plan",
@@ -85,7 +85,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Drafts a funder-specific data management and sharing plan from current authoritative requirements.",
-    translation: "Routes unstable policy claims through primary-source verification and produces a local draft; it never submits a plan or invents institutional facts."
+    translation: "Checks current funder requirements against primary sources and saves a local draft for review."
   },
   {
     name: "deep-audit",
@@ -93,7 +93,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Combines deterministic repository validators with independent provenance, behavior, executable, and UX review lenses.",
-    translation: "Implements the upstream audit intent with bounded Codex reviewers, typed findings, convergence rules, and explicit CLEAN, CONDITIONALLY CLEAN, or NOT CLEAN states."
+    translation: "Gives each reviewer a distinct part of the audit and combines their findings into a verdict: CLEAN, CONDITIONALLY CLEAN, or NOT CLEAN."
   },
   {
     name: "deploy",
@@ -109,7 +109,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Challenges slide ordering, prerequisites, notation, motivation, and cognitive load without editing.",
-    translation: "Runs as a read-only, evidence-located review and returns bounded questions rather than an untraceable global critique."
+    translation: "Returns specific questions tied to slides or passages. The review is read-only."
   },
   {
     name: "diagnose",
@@ -133,15 +133,15 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Pre-screens restricted-data outputs for small cells, dominance, exact counts, PII, and unsafe statistics.",
-    translation: "Turns disclosure control into a local release gate with CRITICAL, WARNING, and OK findings; it never substitutes for an authorized disclosure officer."
+    translation: "Screens outputs locally and marks findings CRITICAL, WARNING, or OK. Release still requires the appropriate disclosure approval."
   },
   {
     name: "extract-tikz",
     family: "Teaching and presentations",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Extracts TikZ blocks from Beamer, compiles standalone diagrams, and converts them to SVG.",
-    translation: "Uses project-relative paths, current binaries, deterministic indexing, and explicit compiler/converter checks instead of shell-specific assumptions."
+    summary: "Turns TikZ figures from a Beamer deck into standalone SVGs.",
+    translation: "Finds the compiler and converter on the current machine. It keeps paths relative to the project and assigns each figure a consistent index."
   },
   {
     name: "grant-proposal",
@@ -157,7 +157,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Audits academic prose for repetitive, generic, promotional, or LLM-associated style patterns.",
-    translation: "Runs as a read-only style diagnosis, avoids authorship inference, and separates evidence-backed findings from any later rewriting request."
+    translation: "Flags repetitive phrasing and other style patterns for the author to review. The audit leaves edits to a separate step and makes no judgment about authorship."
   },
   {
     name: "interview-me",
@@ -165,7 +165,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Turns a fuzzy research idea into a specification for question, estimand, identification, data, inference, and risks.",
-    translation: "Uses an explicit multi-turn preflight and writes a local specification rather than conflating ideation with literature search or implementation."
+    translation: "Asks follow-up questions about the study and saves the resulting research specification locally."
   },
   {
     name: "learn",
@@ -173,7 +173,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Turns a verified, reusable discovery into a narrowly triggered Codex skill.",
-    translation: "Rebuilds skill authoring around Codex metadata, scoped resources, secret checks, and structural validation rather than provider command folders."
+    translation: "Writes Codex skill metadata and includes only the resources the skill needs. It checks the structure and screens drafts for secrets."
   },
   {
     name: "lit-review",
@@ -197,7 +197,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Designs and scaffolds a Codex skill from a repeated or fuzzy workflow request.",
-    translation: "Maps intent to Codex trigger metadata, concise instructions, optional resources, UI metadata, and deterministic validation with no migration placeholders."
+    translation: "Turns a workflow into a usable skill by documenting when to invoke it, which resources it needs, and how to check its structure."
   },
   {
     name: "pedagogy-review",
@@ -245,7 +245,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Native rewrite",
     summary: "Checks academic TeX and Quarto prose for language, terminology, notation, citations, and render-visible overflow.",
-    translation: "Produces a read-only, location-specific report and treats unrendered layout as UNVERIFIED rather than guessing from source."
+    translation: "Returns a read-only report with file and line references. Layout remains UNVERIFIED until the document is rendered."
   },
   {
     name: "qa-quarto",
@@ -268,8 +268,8 @@ window.MAW_CAPABILITIES = [
     family: "Empirical and reproducibility",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Assembles a local journal-oriented replication package with manifests, one-command execution, and exhibit mapping.",
-    translation: "Separates open, licensed, restricted, and unavailable data; verifies artifacts locally and never uploads a deposit."
+    summary: "Builds a local replication package for a journal submission. One command runs the analysis, and a manifest links each exhibit to the code that produces it.",
+    translation: "The manifest records the access status of each dataset. The skill checks the package locally and leaves deposit submission to the user."
   },
   {
     name: "research-ideation",
@@ -301,23 +301,23 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Composed replacement",
     summary: "Reviews manuscripts in comprehensive, adversarial, or journal-calibrated simulated peer-review modes.",
-    translation: "Composes portable editor and referee roles, bounded fresh-context reviewers, typed findings, code linkage, and hallucination checks instead of provider-specific agents."
+    translation: "Assigns separate roles to editors and referees. The review ties its findings to the manuscript and checks any relevant code and claims."
   },
   {
     name: "review-r",
     family: "Empirical and reproducibility",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Performs a read-only review of R code for reproducibility, numerical safety, and domain correctness.",
-    translation: "Separates static code review from executing numeric claims and keeps any unavailable project convention or data dependency explicit."
+    summary: "Reviews R scripts for correctness and whether someone else can rerun them.",
+    translation: "The review is read-only. It records missing data and project conventions that could affect the findings."
   },
   {
     name: "scaffold-exercises",
     family: "Teaching and presentations",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Scaffolds analytical, empirical, and coding exercises with separate student and solution artifacts.",
-    translation: "Preserves source authority and protected-answer separation while keeping grading, exam administration, and publication outside the workflow."
+    summary: "Drafts problem sets that can include analytical work, empirical tasks, and coding.",
+    translation: "Keeps the student handout separate from the answer key and follows the supplied source material."
   },
   {
     name: "seven-pass-review",
@@ -325,7 +325,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Composed replacement",
     summary: "Runs seven independent manuscript lenses across argument, methods, results, robustness, prose, and citations.",
-    translation: "Rebuilds parallel review with bounded Codex contexts and deterministic reduction of typed findings into one prioritized revision plan."
+    translation: "Gives seven Codex reviewers separate parts of the manuscript and combines their findings into one prioritized revision plan."
   },
   {
     name: "simulation-study",
@@ -341,7 +341,7 @@ window.MAW_CAPABILITIES = [
     origin: "adapted",
     mode: "Composed replacement",
     summary: "Coordinates visual, pedagogical, proofreading, diagram, parity, code, and subject-matter slide reviews.",
-    translation: "Conditionally fans out only the relevant Codex reviewer roles and reduces evidence without granting review agents editing authority."
+    translation: "Selects reviewers based on what the deck contains. They report findings and leave the slides unchanged."
   },
   {
     name: "stata-replication",
@@ -364,8 +364,8 @@ window.MAW_CAPABILITIES = [
     family: "Teaching and presentations",
     origin: "adapted",
     mode: "Native rewrite",
-    summary: "Builds or restructures a dependency-ordered syllabus with objectives, assessment alignment, and editable policy language.",
-    translation: "Uses supplied topics and readings as authority, exposes assumptions, and does not silently create unsupported institutional policy."
+    summary: "Builds a syllabus that teaches prerequisites first and links learning objectives to assessments.",
+    translation: "Uses the supplied topics and readings, makes assumptions visible, and leaves the policy language open for instructor review."
   },
   {
     name: "teach-from-paper",
@@ -421,7 +421,7 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Assesses how MAW can safely join a new or ongoing research, teaching, or mixed project.",
-    translation: "Starts assessment-only, maps source authority and protected material, tests representative dependencies, and recommends plugin-only, thin, selective, or full adoption."
+    translation: "Starts with a read-only assessment. It identifies authoritative sources and protected files, checks representative dependencies, and recommends how much of MAW to adopt."
   },
   {
     name: "caw",
@@ -429,7 +429,7 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Coordinates ownership when MAW coexists with other plugins, connectors, skills, and local instructions.",
-    translation: "Produces a short read-only execution contract instead of inventing global plugin precedence; unresolved or unavailable capabilities remain explicit."
+    translation: "Records who handles each step and identifies tools that are unavailable. It asks the user to resolve choices that affect the project."
   },
   {
     name: "paw",
@@ -437,7 +437,7 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Maintains shared project personalization and separate machine-specific choices.",
-    translation: "Stores team decisions in tracked .maw/profile.yaml, personal non-weakening settings in ignored .maw/local.yaml, and records capability ownership without copying another plugin's internals."
+    translation: "Stores team decisions in the tracked .maw/profile.yaml. Personal settings live in the ignored .maw/local.yaml and must respect shared safeguards."
   },
   {
     name: "law",
@@ -445,7 +445,7 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Designs and verifies root and nested Codex instruction layers for an academic project.",
-    translation: "Builds a read-only instruction graph first, keeps root invariants separate from subtree differences, and checks effective precedence at representative target paths."
+    translation: "First maps the instructions already in place. It then checks which root and folder rules apply at specific paths."
   },
   {
     name: "uaw",
@@ -453,7 +453,7 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Reconciles an explicitly requested MAW update with an existing project's overlays and ownership decisions.",
-    translation: "Uses a three-way comparison of old base, project overlay, and candidate base; discovery, planning, applying, installation, and external actions remain distinct gates."
+    translation: "Compares the previous MAW base, the project's settings, and the proposed update. The project owner can review conflicts before applying or installing changes."
   },
   {
     name: "saw",
@@ -461,6 +461,6 @@ window.MAW_CAPABILITIES = [
     origin: "native",
     mode: "Native addition",
     summary: "Exports sanitized, evidence-bounded slices of recorded MAW project state.",
-    translation: "Excludes secrets, private transcript internals, data, student information, unpublished content, and external-plugin settings; unsupported inferences are not promoted."
+    translation: "Prepares a local summary from recorded project state. It leaves out secrets, private transcript details, data, student information, unpublished content, and other plugins' settings."
   }
 ];

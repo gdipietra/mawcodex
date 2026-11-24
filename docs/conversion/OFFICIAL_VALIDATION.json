@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "package_version": "1.2.2",
-  "generated_at": "2026-08-23T21:23:47.279011+00:00",
+  "generated_at": "2026-11-24T03:53:11.519567+00:00",
   "plugin_validator": {
     "result": "PASS",
-    "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\plugin-creator\\scripts\\validate_plugin.py",
-    "validator_sha256": "7a75b3339396402ad9a40ddc1e037e01c54e71a53a3bfb22a01b1ca235c50206"
+    "path": "C:\\Users\\gdipi\\AppData\\Local\\Temp\\mawcodex-redesign-validation\\validate_plugin.py",
+    "validator_sha256": "ebda00d55d7518b127f675f062fb5c6e7a1ffdc0a99df1a55ac594400d7d3228"
   },
   "skill_validator": {
     "result": "PASS",
     "passed": 58,
     "total": 58,
-    "path": "C:\\Users\\gdipi\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
-    "validator_sha256": "547af3cec2ae71ac2a4ef606365d23a8c58b586862211e9c7a9be7bfd0e30fbb"
+    "path": "C:\\Users\\gdipi\\AppData\\Local\\Temp\\mawcodex-redesign-validation\\quick_validate.py",
+    "validator_sha256": "1fd66498c219616fd9249eacdf16c458412ea9065a9d887fd716aeef03907762"
   },
   "source_contract": {
     "result": "PASS",
@@ -33,7 +33,7 @@
   },
   "release_snapshot": {
     "algorithm": "sha256",
-    "digest": "37a14be08476e9fa9796604bf1e9c04f42c3d0e2a19188de4210b88dff88cd17",
+    "digest": "f3ab79c8e9a228da94c55eb9cb2be8c4017ec2510f7b4967dcb27bde26fb1642",
     "file_count": 439
   }
 }

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A capability-by-capability ledger for 52 workflows adapted from Pedro H. C. Sant'Anna and six original MAW Codex management skills.">
-  <meta name="theme-color" content="#23072e">
+  <meta name="description" content="Browse 52 skills adapted from Pedro H. C. Sant'Anna's workflow and six MAW Codex skills for managing projects.">
+  <meta name="theme-color" content="#0b0b0d">
   <link rel="canonical" href="https://gdipietra.github.io/mawcodex/capabilities.html">
   <link rel="icon" href="assets/brand/maw-icon.png">
   <link rel="stylesheet" href="assets/site.css">
-  <title>Capability ledger - MAW Codex</title>
+  <title>Capabilities | MAW Codex</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,10 +20,8 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <div class="nav-links" id="nav-links">
-        <a href="index.html#origin">Origin</a>
-        <a href="index.html#translation">Translation</a>
-        <a href="index.html#control-plane">MAW layer</a>
         <a href="capabilities.html" aria-current="page">Capabilities</a>
+        <a href="index.html#control-plane">Project management</a>
         <a href="credits.html">Credits</a>
         <a href="support.html">Support</a>
       </div>
@@ -32,29 +30,23 @@
 
   <main id="main" class="shell">
     <header class="page-hero">
-      <p class="eyebrow">Capability translation ledger</p>
-      <h1>Every skill, with its lineage visible.</h1>
-      <p class="lede">
-        The 52 source-derived skills below preserve substantive workflow intent
-        from Pedro H. C. Sant'Anna's <code>v2.1.0</code> release. The six native
-        skills form MAW Codex's original project-control layer. “Native rewrite”
-        describes a Codex implementation of upstream intent; “composed
-        replacement” means several Codex surfaces jointly replace one
-        provider-specific workflow.
-      </p>
-      <div class="notice">
-        This public ledger is explanatory. The authoritative source paths,
-        SHA-256 hashes, classifications, revision records, and test state live
-        in the repository's <a href="https://github.com/gdipietra/mawcodex/tree/main/docs/conversion">conversion record</a>.
-      </div>
+      <h1>Capabilities</h1>
+      <p class="lede">Browse 52 skills adapted from Pedro H. C. Sant'Anna's
+        <code>v2.1.0</code> release and six MAW Codex skills for managing projects.</p>
+      <p>A <strong>native rewrite</strong> implements an upstream skill in Codex.
+        A <strong>composed replacement</strong> combines several Codex features
+        to cover one upstream workflow. A <strong>native addition</strong> is a
+        skill created for MAW Codex.</p>
+      <p class="muted">Source files, hashes, and test records are in the
+        <a href="https://github.com/gdipietra/mawcodex/tree/main/docs/conversion">conversion record</a>.</p>
     </header>
 
     <section aria-labelledby="ledger-title">
-      <h2 id="ledger-title" class="eyebrow">Search and filter</h2>
+      <h2 id="ledger-title" class="eyebrow">Find a skill</h2>
       <div class="toolbar">
         <label>
-          <span class="skip-link">Search capabilities</span>
-          <input class="search" type="search" placeholder="Search name, purpose, or adaptation..." data-capability-search>
+          <span class="visually-hidden">Search capabilities</span>
+          <input class="search" type="search" placeholder="Search skills" data-capability-search>
         </label>
         <div class="filters" aria-label="Capability filters">
           <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -68,10 +60,9 @@
         </div>
       </div>
       <div class="ledger-meta">
-        <span data-capability-count>58 skills</span>
-        <span>Source boundary: Pedro v2.1.0</span>
+        <span data-capability-count role="status">58 skills</span>
       </div>
-      <div class="capability-grid" data-capability-grid aria-live="polite"></div>
+      <div class="capability-grid" data-capability-grid></div>
       <noscript>
         <p class="notice">JavaScript is disabled. The same capability records are available in the repository under <code>skills/</code> and <code>docs/conversion/skills/</code>.</p>
       </noscript>
@@ -83,7 +74,7 @@
       <div class="footer-grid">
         <div>
           <h2>MAW Codex</h2>
-          <p>Capability detail without provenance collapse.</p>
+          <p>Academic workflows for research and teaching.</p>
         </div>
         <div class="footer-links">
           <strong>Project</strong>
